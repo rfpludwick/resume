@@ -1,0 +1,859 @@
+---
+
+contact:
+  name: Robert F.P. Ludwick
+  url: "https://ludwick.us/"
+  location: "Portland Metropolitan Area, OR"
+skills:
+  - name: Process Management
+    tags:
+      - non_technical
+  - name: Project Management
+    tags:
+      - non_technical
+  - name: Communication
+    tags:
+      - non_technical
+  - name: Mentorship
+    tags:
+      - non_technical
+  - name: Coaching
+    tags:
+      - non_technical
+  - name: OKRs
+    tags:
+      - non_technical
+  - name: Goal Setting
+    tags:
+      - non_technical
+  - name: Performance Improvement
+    tags:
+      - non_technical
+  - name: Technical Leadership
+    tags:
+      - non_technical
+  - name: Scrum Agile SDLC
+    tags:
+      - non_technical
+  - name: Leadership
+    tags:
+      - non_technical
+  - name: Team Building
+    tags:
+      - non_technical
+  - name: Team Management
+    tags:
+      - non_technical
+  - name: Employee Training
+    tags:
+      - non_technical
+  - name: Behavioral Interviewing
+    tags:
+      - non_technical
+  - name: Software Engineering
+    tags:
+      - technical
+  - name: Amazon Web Services (AWS)
+    tags:
+      - technical
+  - name: "Continuous Integration & Deployment (CI/CD)"
+    tags:
+      - technical
+  - name: DevOps
+    tags:
+      - technical
+  - name: Docker
+    tags:
+      - technical
+  - name: Kubernetes
+    tags:
+      - technical
+  - name: Infrastructure as Code (IaC)
+    tags:
+      - technical
+  - name: Terraform
+    tags:
+      - technical
+  - name: Helm
+    tags:
+      - technical
+  - name: Golang
+    tags:
+      - technical
+  - name: System Architecture
+    tags:
+      - technical
+  - name: Web Development
+    tags:
+      - technical
+  - name: Linux
+    tags:
+      - technical
+  - name: Microsoft Windows
+    tags:
+      - technical
+  - name: macOS
+    tags:
+      - technical
+  - name: PHP
+    tags:
+      - technical
+  - name: JavaScript (JS)
+    tags:
+      - technical
+  - name: Git
+    tags:
+      - technical
+  - name: Structured Query Language (SQL)
+    tags:
+      - technical
+  - name: MySQL
+    tags:
+      - technical
+  - name: Integration
+    tags:
+      - technical
+  - name: Ansible
+    tags:
+      - technical
+  - name: Scalability
+    tags:
+      - technical
+  - name: NGINX
+    tags:
+      - technical
+  - name: Packer
+    tags:
+      - technical
+  - name: Buildkite
+    tags:
+      - technical
+  - name: Hypertext Markup Language (HTML)
+    tags:
+      - technical
+  - name: Cascading Stylesheets (CSS)
+    tags:
+      - technical
+  - name: Video Games
+    tags:
+      - technical
+  - name: Design Patterns
+    tags:
+      - technical
+  - name: AngularJS
+    tags:
+      - technical
+  - name: Redis
+    tags:
+      - technical
+  - name: Apache
+    tags:
+      - technical
+  - name: Vagrant
+    tags:
+      - technical
+  - name: RabbitMQ
+    tags:
+      - technical
+  - name: Distributed Systems
+    tags:
+      - technical
+  - name: eXtensible Markup Language (XML)
+    tags:
+      - technical
+  - name: Extensible Stylesheet Language Transformations (XSLT)
+    tags:
+      - technical
+  - name: Upsource
+    tags:
+      - technical
+  - name: "Vault [Hashicorp]"
+    tags:
+      - technical
+  - name: Laravel
+    tags:
+      - technical
+  - name: TeamCity
+    tags:
+      - technical
+  - name: "E-commerce"
+    tags:
+      - technical
+  - name: GitHub
+    tags:
+      - tools
+  - name: Slack
+    tags:
+      - tools
+  - name: Jira
+    tags:
+      - tools
+  - name: VSCode
+    tags:
+      - tools
+  - name: Microsoft Office
+    tags:
+      - tools
+  - name: Ubiquiti UniFi
+    tags:
+      - tools
+  - name: Trello
+    tags:
+      - tools
+  - name: Google Drive/Docs/etc.
+    tags:
+      - tools
+  - name: VeraCrypt
+    tags:
+      - tools
+  - name: VirtualBox
+    tags:
+      - tools
+employment:
+  - organization: "Workday, Inc."
+    url: "https://workday.com/"
+    location: "Beaverton, OR"
+    positions:
+      - title: "Manager, Software Development Engineering"
+        normalized_title: DevOps Software Engineering Manager
+        flavor: UI Platform
+        summary: |
+          Manager for DevOps team owning multiple service pipelines as well as
+          AWS/Kubernetes infrastructure.
+        dates:
+          start: Apr. 2021
+          end: Present
+        bullet_points:
+          - |
+            Replaced aging self-managed Kubernetes infrastructure with greenfield
+            EKS-based infrastructure.
+          - |
+            Started transition of Jenkins-based CI/CD to modern Tekton, Prow,
+            & Flux-based CI/CD platform.
+          - |
+            Introduced multiple DevSecOps tools and processes to harden the automation
+            toolchain, such as x-ray and Snyk.
+          - |
+            Implemented on-call rotation to streamline operational responsibilities
+            & respond to after-hours incidents, resulting in greater throughput
+            on development tasks.
+          - |
+            Marshaled multi-team human resources to reduce build times on largest
+            service from 2.5 hours to 1.5 hours.
+          - |
+            Shifted deployment responsibilities further left to service development
+            teams by streamlining interfaces and automating many manual tasks.
+        tags:
+          - software_engineering
+          - leadership
+          - management
+    tags:
+      - software_engineering
+      - leadership
+      - management
+      - mainline
+  - organization: "CD Baby, Inc."
+    organization_extra: of Downtown Music Holdings
+    url: "https://cdbaby.com/"
+    location: "Portland, OR"
+    positions:
+      - title: Development Manager
+        normalized_title: Software Engineering Manager
+        flavor: Artist Promotional Tools
+        summary: |
+          Manager for promotional tools to help independent musical artists grow
+          their fanbase and reach.
+        dates:
+          start: Sep. 2016
+          end: Mar. 2021
+        bullet_points:
+          - |
+            Improved reliability of applications and team velocity through standardized
+            implementation of code reviews, automated testing, continuous integration
+            and deployment, and code quality metrics.
+          - |
+            Modernized applications and products by introducing containerization,
+            hybrid cloud computing via AWS, and modern infrastructure and provisioning
+            tools such as Terraform and Ansible.
+          - |
+            Increased subscriber base and profitability of our primary promotional
+            tool by focusing on business feature pipelines and improving on-time
+            delivery of projects.
+          - |
+            Reduced operating costs by 30% by aggressively consolidating services,
+            decommissioning multiple self-hosted solutions in favor of managed
+            solutions, and rearchitecting applications in cloud-native design
+            patterns.
+          - |
+            Improved team process workflows by introducing redundancies where individual
+            bottlenecks existed and by focusing areas of responsibility where they
+            were previously too broad.
+          - |
+            Created and drove technology roadmap to marry long-term technical strategy
+            with business projects and needs.
+        tags:
+          - software_engineering
+          - leadership
+          - management
+    tags:
+      - software_engineering
+      - leadership
+      - management
+      - mainline
+  - organization: "Playtika Santa Monica, LLC"
+    organization_extra: formerly Buffalo Studios
+    url: "https://playtika.com/"
+    location: "Santa Monica, CA"
+    positions:
+      - title: "Manager, Software Engineering, Tools"
+        normalized_title: Software Engineering Manager
+        flavor: Tools
+        summary: |
+          Manager for back-office, internal tools to streamline content management
+          and marketing functions.
+        dates:
+          start: Feb. 2015
+          end: Aug. 2016
+        bullet_points:
+          - |
+            Improved mobile push notification services' throughput by 150x by
+            implementing distributed computing - scaling multiple services both
+            horizontally and vertically.
+          - |
+            Streamlined product and marketing teams' workflows in managing content
+            for mobile games by improving user interfaces, consolidating multiple
+            steps, and moving some functions to advanced editors for power users.
+          - |
+            Improved general back office tools frontend and backend performance
+            by replacing legacy monolith application with a modern, robust backend
+            REST API coupled with an AngularJS 1.2.x frontend.
+          - |
+            Saved 20 person-hours, weekly, of marketing team's time by developing
+            custom audience and pixel management solutions in-house to integrate
+            with Facebook and other marketing platforms.
+          - |
+            Successfully integrated remote team in Minsk, Belarus with team in
+            Santa Monica, including sprint cadences, milestones, and cross-timezone
+            collaborative work.
+        tags:
+          - software_engineering
+          - leadership
+          - management
+      - title: "Lead Software Engineer, Tools"
+        normalized_title: Lead Software Engineer
+        flavor: Tools
+        summary: |
+          Lead engineer for back-office, internal tools to streamline content management
+          and marketing functions.
+        dates:
+          start: May 2013
+          end: Feb. 2015
+        bullet_points:
+          - |
+            Improved mobile push notification services' throughput by 150x by
+            implementing distributed computing - scaling multiple services both
+            horizontally and vertically.
+          - |
+            Streamlined product and marketing teams' workflows in managing content
+            for mobile games by improving user interfaces, consolidating multiple
+            steps, and moving some functions to advanced editors for power users.
+          - |
+            Saved 20 person-hours, weekly, of marketing team's time by developing
+            custom audience and pixel management solutions in-house to integrate
+            with Facebook and other marketing platforms.
+        tags:
+          - software_engineering
+          - leadership
+          - individual_contributor
+      - title: "Senior Software Engineer, Tools"
+        normalized_title: Senior Software Engineer
+        flavor: Tools
+        summary: |
+          Senior engineer for back-office, internal tools to streamline content
+          management and marketing functions.
+        bullet_points:
+          - |
+            Built back-office toolset from scratch to integrate with custom game
+            libraries and frameworks.
+          - |
+            Improved mobile push notification services' throughput by 150x by
+            implementing distributed computing - scaling multiple services both
+            horizontally and vertically.
+          - |
+            Streamlined product and marketing teams' workflows in managing content
+            for mobile games by improving user interfaces, consolidating multiple
+            steps, and moving some functions to advanced editors for power users.
+        dates:
+          start: Jan. 2012
+          end: May 2013
+        tags:
+          - software_engineering
+          - individual_contributor
+    tags:
+      - software_engineering
+      - leadership
+      - management
+      - individual_contributor
+      - mainline
+  - organization: DarqFlare Enterprises
+    location: Various
+    positions:
+      - title: Consultant
+        summary: |
+          Consultant for various software engineering needs on a contractual basis.
+        dates:
+          start: May 2004
+          end: May 2012
+        bullet_points:
+          - |
+            Consulted largely on PHP-based, short-term software engineering contracts.
+          - |
+            Most clients served were in the Las Vegas Metropolitan Area, Nevada.
+        tags:
+          - software_engineering
+          - consulting
+          - contract
+  - organization: "Meteor Games, LLC"
+    location: "Beverly Hills, CA"
+    positions:
+      - title: Lead PHP Game Engineer
+        normalized_title: Lead Software Engineer
+        summary: |
+          Lead backend engineer for Meteor Games' hit game Island Paradise.
+        dates:
+          start: Aug. 2011
+          end: Dec. 2011
+        bullet_points:
+          - |
+            Redesigned data management in Island Paradise game to allow for massive
+            increase in player data, resulting in repeated record in-game sales
+            due to increased player inventory capacity.
+          - |
+            Built “limited inventory” game feature, which resulted in the best single-day
+            sales in company history.
+        tags:
+          - software_engineering
+          - leadership
+          - individual_contributor
+      - title: Senior PHP Game Engineer
+        normalized_title: Senior Software Engineer
+        summary: |
+          Senior backend engineer on Meteor Games' hit game Island Paradise.
+        dates:
+          start: Feb. 2011
+          end: Jul. 2011
+        bullet_points:
+          - |
+            Redesigned data management in Island Paradise game to allow for massive
+            increase in player data, resulting in repeated record in-game sales
+            due to increased player inventory capacity.
+          - |
+            Built “limited inventory” game feature, which resulted in the best single-day
+            sales in company history.
+        tags:
+          - software_engineering
+          - individual_contributor
+    tags:
+      - software_engineering
+      - leadership
+      - individual_contributor
+      - mainline
+  - organization: "DataX, Ltd."
+    organization_extra: formerly of The Selling Source; now of Equifax
+    url: "https://dataxltd.com/"
+    location: "Las Vegas, NV"
+    positions:
+      - title: PHP Developer II
+        normalized_title: Software Engineer
+        summary: |
+          Backend engineer on various DataX systems, from identity verification
+          to subprime credit reporting records.
+        dates:
+          start: Jun. 2007
+          end: Feb. 2011
+        bullet_points:
+          - |
+            Programmed major new versions of almost all applications, which improved
+            performance, reliability, flexibility, and customization options for
+            all clients.
+          - |
+            Built fully-featured transaction search tool, allowing deep inspection
+            into real-time traffic; this system was critical in identifying a large
+            number of improvements to be made to both applications and customer
+            rulesets.
+          - |
+            Created a flexible database-managed ruleset system for customer business
+            rule processing, resulting in faster deployments of rule changes and
+            no more need for a full deployment to incorporate changes.
+        tags:
+          - software_engineering
+          - individual_contributor
+      - title: PHP Developer I
+        normalized_title: Software Engineer
+        summary: |
+          Backend engineer on various DataX systems, from identity verification
+          to subprime credit reporting records.
+        dates:
+          start: Mar. 2007
+          end: May 2007
+        bullet_points:
+          - |
+            Successfully onboarded to the team and applications.
+        tags:
+          - software_engineering
+          - individual_contributor
+    tags:
+      - software_engineering
+      - individual_contributor
+      - mainline
+  - organization: "Swim2000, Inc."
+    url: "https://swim2000.com/"
+    location: "Las Vegas, NV"
+    positions:
+      - title: Web Developer
+        normalized_title: Software Engineer
+        summary: |
+          Solo in-house (full-stack) software engineer for Swim2000's retail site
+          and back-office systems.
+        dates:
+          start: May 2004
+          end: Mar. 2007
+        bullet_points:
+          - |
+            Built the customer-facing e-commerce application from the ground up,
+            replacing an aging legacy backend which relied upon static files to
+            display products.
+          - |
+            Engineered an integrated cash register system, which allowed the retail
+            location to use the same order fulfillment system the website used.
+        tags:
+          - software_engineering
+          - individual_contributor
+    tags:
+      - software_engineering
+      - individual_contributor
+      - mainline
+  - organization: "Dambert Technologies, LLC"
+    location: "Las Vegas, NV"
+    positions:
+      - title: "Owner, CEO"
+        summary: |
+          Developed e-commerce platform for drop shipping electronics.
+        dates:
+          start: May 2004
+          end: Jan. 2007
+        bullet_points:
+          - |
+            Drop shipped electronics from multiple distributors using custom-built
+            e-commerce retail platform.
+          - |
+            Ownership of business was a partnership.
+        tags:
+          - software_engineering
+          - individual_contributor
+          - business_ownership
+    tags:
+      - software_engineering
+      - individual_contributor
+      - business_ownership
+  - organization: The Rebel Yell
+    organization_extra: "now The Scarlet & Gray Free Press"
+    url: "https://unlvscarletandgray.com/"
+    location: "Las Vegas, NV"
+    positions:
+      - title: Staff Member
+        normalized_title: "Software Engineer, Columnist"
+        summary: |
+          Software engineer and columnist for UNLV's student newspaper.
+        dates:
+          start: May 2005
+          end: Dec. 2006
+        bullet_points:
+          - |
+            Built the content management system from the ground up and imported
+            old College Publisher content.
+          - |
+            Wrote occasional technology-focused columns for the paper.
+          - |
+            Later, on a contractual basis after I graduated, assisted my successor
+            in reverting the website back to my CMS when a migration failed.
+        tags:
+          - journalism
+          - software_engineering
+          - individual_contributor
+    tags:
+      - journalism
+      - software_engineering
+      - individual_contributor
+      - mainline
+  - organization: College of Southern Nevada
+    url: "https://csn.edu/"
+    location: "Las Vegas, NV"
+    positions:
+      - title: Lab Assistant
+        summary: |
+          Computer ab assistant for many campus locations to assist college students
+          with lab floor technology.
+        dates:
+          start: Aug. 2001
+          end: May 2004
+        bullet_points:
+          - |
+            Assisted college students with technical needs regarding computers and
+            printers on the lab floor.
+          - |
+            Occasionally helped programming students with homework and take-home
+            labs where I had experience in the programming language assigned.
+        tags:
+          - technical_support
+          - mainline
+    tags:
+      - technical_support
+      - mainline
+volunteering:
+  - organization: Clackamas Traffic Safety Commission
+    url: "https://www.clackamas.us/meetings/engineering/tsc"
+    location: "Clackamas County, OR"
+    positions:
+      - title: Commissioner
+        summary: |
+          Tasked with reducing traffic accidents and fatalities in Clackamas
+          County.
+        dates:
+          start: Jul. 2017
+          end: Feb. 2022
+        bullet_points:
+          - |
+            Acted as Vice Chair for 3 years.
+          - |
+            Helped drive adoption of high-friction road treatments through commission
+            outreach campaigns.
+          - |
+            Staffed county fair booth to encourage safe driving habits.
+        tags:
+          - safety
+          - leadership
+    tags:
+      - safety
+      - leadership
+  - organization: Library District of Clackamas County Budget Committee
+    url: "https://www.clackamas.us/librarydistrict/budget.html"
+    location: "Clackamas County, OR"
+    positions:
+      - title: Committee Member
+        summary: |
+          Tasked with ensuring the Library District's budget is correct and approving
+          it if so.
+        dates:
+          start: Nov. 2017
+          end: Oct. 2020
+        tags:
+          - budget
+    tags:
+      - budget
+  - organization: Clackamas Traffic Safety Action Plan
+    location: "Clackamas County, OR"
+    positions:
+      - title: Advisory Committee Member
+        summary: |
+          Multi-disciplinary, multi-committee task force which worked on long-term
+          traffic safely planning for Clackamas County.
+        dates:
+          start: Nov. 2017
+          end: Dec. 2018
+        tags:
+          - safety
+    tags:
+      - safety
+  - organization: UNLV Catholic Newman Center
+    url: "http://unlvnewman.com/"
+    location: "Las Vegas, NV"
+    positions:
+      - title: "Webmaster & Sound Engineer"
+        summary: |
+          Helped the campus faith community in various ways.
+        dates:
+          start: Aug. 2004
+          end: Aug. 2008
+        bullet_points:
+          - |
+            Maintained the community's website.
+          - |
+            Operated the sound board for Sunday Mass.
+          - |
+            Volunteered to assist and coordinate in various community events.
+        tags:
+          - faith
+          - religion
+    tags:
+      - faith
+      - religion
+  - organization: Most Valuable Network
+    location: Remote
+    positions:
+      - title: Staff Writer
+        summary: |
+          Blogger for Tennessee Titans coverage and content.
+        dates:
+          start: Jan. 2005
+          end: Dec. 2005
+        bullet_points:
+          - |
+            Wrote regular blog posts covering the Tennessee Titans; wrote both news
+            articles and opinion pieces.
+          - |
+            Helped design graphical elements for many blog headers in the MVN network.
+        tags:
+          - journalism
+    tags:
+      - journalism
+politics:
+  - organization: Democratic Party of Clackamas County
+    url: "https://www.clackamasdems.org/"
+    location: "Clackamas County, OR"
+    positions:
+      - title: House District Leader
+        summary: |
+          Leader for Oregon House District 51 before the 2020 Census redistricting.
+        dates:
+          start: Oct. 2017
+          end: Mar. 2018
+        bullet_points:
+          - |
+            Helped drive canvassing and get-out-the-vote efforts.
+          - |
+            Acted as point-of-contact for Precinct Committee Members (PCPs) and
+            drove party activity in the House district.
+        tags:
+          - clackamas_county
+          - oregon
+          - democratic_party
+          - leadership
+    tags:
+      - clackamas_county
+      - oregon
+      - democratic_party
+      - leadership
+  - organization: Democratic Party of Clackamas County
+    url: "https://www.clackamasdems.org/"
+    location: "Clackamas County, OR"
+    positions:
+      - title: Neighborhood Leader
+        summary: |
+          Canvassed for local elections.
+        dates:
+          start: Jan. 2018
+          end: Mar. 2018
+        tags:
+          - clackamas_county
+          - oregon
+          - democratic_party
+          - leadership
+    tags:
+      - clackamas_county
+      - oregon
+      - democratic_party
+      - leadership
+  - organization: Democratic Party of Clackamas County
+    url: "https://www.clackamasdems.org/"
+    location: "Clackamas County, OR"
+    positions:
+      - title: Precinct Committee Person
+        summary: |
+          Voting party member of the Clackamas County Democratic Party.
+        dates:
+          start: Feb. 2017
+          end: Mar. 2022
+        tags:
+          - clackamas_county
+          - oregon
+          - democratic_party
+    tags:
+      - clackamas_county
+      - oregon
+      - democratic_party
+education:
+  - title: "Graduate-Level Coursework in Business Administration"
+    url: "https://unlv.edu/"
+    institution: "University of Nevada, Las Vegas"
+    tags:
+      - incomplete
+      - graduate_level
+  - title: Bachelor of Arts in Computer Science
+    url: "https://unlv.edu/"
+    institution: "University of Nevada, Las Vegas"
+    tags:
+      - undergraduate_level
+projects:
+  - title: "OMGN: Online Movies & Games Network"
+    url: "http://omgn.com/"
+    location: Various
+    role: "Owner, Software Engineer"
+    summary: |
+      OMGN covered indie multiplayer online video games & films.
+    dates:
+      start: Oct. 2002
+      end: Feb. 2015
+    bullet_points:
+      - |
+        Built the website's various CMSes through the years.
+      - |
+        Managed volunteer staff & coordinated attendance at various industry press
+        events, such as E3.
+      - |
+        Wrote regular news articles and video game/movie reviews.
+      - |
+        Handed off IP and content of OMGN in February 2015; anything after that
+        date is no loner under my control.
+    tags:
+      - video_games
+      - movies
+      - journalism
+      - mainline
+certifications:
+  - certification: "AWS Certified Developer - Associate; DVA"
+    authority: Amazon Web Services
+    credential: X4B44KECF141Q9KM
+    dates:
+      start: 2019
+      end: 2022
+    tags:
+      - technical
+      - mainline
+  - certification: "AWS Certified Solutions Architect - Associate; SAA"
+    authority: Amazon Web Services
+    credential: LN2LLRM12B441G59
+    dates:
+      start: 2018
+      end: 2021
+    tags:
+      - technical
+      - mainline
+  - certification: Certified ScrumMaster; CSM
+    url: "https://www.scrumalliance.org/community/profile/rludwick"
+    authority: Scrum Alliance
+    credential: 000510361
+    dates:
+      start: 2016
+      end: 2018
+    tags:
+      - project_management
+      - mainline
+  - certification: Zend Certified PHP 5 Engineer; ZCE
+    url: "http://www.zend.com/en/yellow-pages/ZEND007578"
+    authority: Zend Technologies
+    credential: ZEND007578
+    dates:
+      start: 2012
+      end: Present
+    tags:
+      - technical
+      - mainline
+  - certification: Fair Credit Reporting Act; FCRA
+    authority: Consumer Data Industry Association
+    dates:
+      start: 2010
+      end: 2012
+    tags:
+      - financial
+      - compliance

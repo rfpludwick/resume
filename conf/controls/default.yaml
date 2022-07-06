@@ -1,0 +1,71 @@
+---
+
+pdf:
+  filename: Robert F.P. Ludwick Resume.pdf
+  fonts:
+    header: Times
+    footer: Times
+    default: Arial
+  margins:
+    left: 10
+    top: 8
+    right: 10
+  keywords:
+    - Ludwick
+    - Resume
+    - CV
+    - Technology
+    - Leadership
+    - Software
+flavor:
+  header: Technology Leadership
+  footer: "RFPL-Resume"
+skills:
+  first:
+    title: Management and Leadership Skills
+    count: 10
+    tags:
+      - non_technical
+  second:
+    title: Technical Skills and Background
+    count: 10
+    tags:
+      - technical
+  third:
+    title: Additional Technical Skills
+    count: 16
+    tags:
+      - technical
+employers:
+  expanded:
+    title: Professional Experience
+    count: 3
+    bullet_points:
+      start: 6
+      decrement: 1
+    collapse_multiple_positions: collapse
+    tags:
+      - mainline
+  condensed:
+    title: Additional Professional Experience
+    count: 3
+    tags:
+      - mainline
+volunteering:
+  expanded:
+    count: 0
+  condensed:
+    count: 0
+politics:
+  expanded:
+    count: 0
+  condensed:
+    count: 0
+education:
+  title: Education
+  count: 2
+certifications:
+  title: Certifications
+  count: 4
+  tags:
+    - mainline

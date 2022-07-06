@@ -1,0 +1,23 @@
+{
+	"window.title": "${activeEditorMedium}${dirty}${separator}Resume${separator}${appName}",
+	"go.toolsGopath": "/usr/lib/go",
+	"cSpell.words": [
+		"Clackamas",
+		"fanbase",
+		"FCRA",
+		"Fpdf",
+		"fullwidth",
+		"gofpdf",
+		"hasher",
+		"imdario",
+		"Laravel",
+		"Playtika",
+		"rearchitecting",
+		"ruleset",
+		"SDLC",
+		"Tekton",
+		"toolset",
+		"UNLV",
+		"Upsource"
+	]
+}

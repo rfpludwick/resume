@@ -1,0 +1,5 @@
+*.pdf
+.devcontainer/*-local.sh
+bin/
+conf/resume/secret.yaml
+./resume
