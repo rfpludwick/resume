@@ -41,6 +41,12 @@ skills:
   - name: Team Building
     tags:
       - non_technical
+  - name: People Management
+    tags:
+      - non_technical
+  - name: Constructive Feedback
+    tags:
+      - non_technical
   - name: Team Management
     tags:
       - non_technical
@@ -48,6 +54,15 @@ skills:
     tags:
       - non_technical
   - name: Behavioral Interviewing
+    tags:
+      - non_technical
+  - name: "Diversity, Equity, & Inclusivity (DEI)"
+    tags:
+      - non_technical
+  - name: Organizing Meetings
+    tags:
+      - non_technical
+  - name: Journalism
     tags:
       - non_technical
   - name: Software Engineering
@@ -128,7 +143,28 @@ skills:
   - name: Buildkite
     tags:
       - technical
+  - name: "Object-Oriented Programming (OOP)"
+    tags:
+      - technical
+  - name: Cloud Computing
+    tags:
+      - technical
+  - name: Software Deployments
+    tags:
+      - technical
   - name: Hypertext Markup Language (HTML)
+    tags:
+      - technical
+  - name: Extensible Hypertext Markup Language (XHTML)
+    tags:
+      - technical
+  - name: Document Object Model (DOM)
+    tags:
+      - technical
+  - name: AJAX
+    tags:
+      - technical
+  - name: Relational Database Management Systems (RDBMS)
     tags:
       - technical
   - name: Cascading Stylesheets (CSS)
@@ -149,6 +185,9 @@ skills:
   - name: Apache
     tags:
       - technical
+  - name: Raspberry Pi
+    tags:
+      - technical
   - name: Vagrant
     tags:
       - technical
@@ -167,7 +206,7 @@ skills:
   - name: Upsource
     tags:
       - technical
-  - name: "Vault [Hashicorp]"
+  - name: "Vault [HashiCorp]"
     tags:
       - technical
   - name: Laravel
@@ -176,9 +215,57 @@ skills:
   - name: TeamCity
     tags:
       - technical
+  - name: Memcached
+    tags:
+      - technical
   - name: "E-commerce"
     tags:
       - technical
+  - name: Amazon ElastiCache
+    tags:
+      - aws
+  - name: Amazon Linux
+    tags:
+      - aws
+  - name: Amazon Route 53
+    tags:
+      - aws
+  - name: Apache Web Server
+    tags:
+      - aws
+  - name: AWS CloudWatch
+    tags:
+      - aws
+  - name: AWS Console
+    tags:
+      - aws
+  - name: AWS EC2
+    tags:
+      - aws
+  - name: AWS ELB
+    tags:
+      - aws
+  - name: AWS IAM
+    tags:
+      - aws
+  - name: AWS Organizations
+    tags:
+      - aws
+  - name: AWS RDS
+    tags:
+      - aws
+  - name: AWS S3
+    tags:
+      - aws
+  - name: AWS SES
+    tags:
+      - aws
+  - name: AWS SNS
+    tags:
+      - aws
+  - name: AWS Transit Gateway
+    tags:
+      - aws
   - name: GitHub
     tags:
       - tools
@@ -194,9 +281,6 @@ skills:
   - name: Microsoft Office
     tags:
       - tools
-  - name: Ubiquiti UniFi
-    tags:
-      - tools
   - name: Trello
     tags:
       - tools
@@ -209,6 +293,12 @@ skills:
   - name: VirtualBox
     tags:
       - tools
+  - name: Ubiquiti UniFi
+    tags:
+      - hardware
+  - name: Synology NAS
+    tags:
+      - hardware
 employment:
   - organization: "Workday, Inc."
     url: "https://workday.com/"
@@ -489,7 +579,7 @@ employment:
           - software_engineering
           - individual_contributor
       - title: PHP Developer I
-        normalized_title: Software Engineer
+        normalized_title: Junior Software Engineer
         summary: |
           Backend engineer on various DataX systems, from identity verification
           to subprime credit reporting records.

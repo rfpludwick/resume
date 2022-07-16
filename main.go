@@ -41,8 +41,12 @@ func main() {
 	pdfContactLine(pdf, c)
 	pdfSkillsSection(pdf, &c.Skills, &c.Controls.Skills.First)
 	pdfSkillsSection(pdf, &c.Skills, &c.Controls.Skills.Second)
-	pdfProfessionalExperience(pdf, c, false)
-	pdfProfessionalExperience(pdf, c, true)
+	pefOrganizationalExperience(pdf, &c.Employment, &c.Controls.Employers, false)
+	pefOrganizationalExperience(pdf, &c.Employment, &c.Controls.Employers, true)
+	pefOrganizationalExperience(pdf, &c.Politics, &c.Controls.Politics, false)
+	pefOrganizationalExperience(pdf, &c.Politics, &c.Controls.Politics, true)
+	pefOrganizationalExperience(pdf, &c.Volunteering, &c.Controls.Volunteering, false)
+	pefOrganizationalExperience(pdf, &c.Volunteering, &c.Controls.Volunteering, true)
 	pdfSkillsSection(pdf, &c.Skills, &c.Controls.Skills.Third)
 	pdfEducation(pdf, c)
 	pdfCertifications(pdf, c)
@@ -227,21 +231,21 @@ skills_loop:
 	}
 }
 
-func pdfProfessionalExperience(pdf *gofpdf.Fpdf, c *Configuration, condensed bool) {
+func pefOrganizationalExperience(pdf *gofpdf.Fpdf, co *[]ConfigurationOrganization, control *ConfigurationControlsOrganizations, condensed bool) {
 	var sectionTitle string
 
 	if condensed {
-		if (c.Controls.Employers.Condensed.Count == 0) || (len(c.Employment) == 0) {
+		if (control.Condensed.Count == 0) || (len(*co) == 0) {
 			return
 		}
 
-		sectionTitle = c.Controls.Employers.Condensed.Title
+		sectionTitle = control.Condensed.Title
 	} else {
-		if (c.Controls.Employers.Expanded.Count == 0) || (len(c.Employment) == 0) {
+		if (control.Expanded.Count == 0) || (len(*co) == 0) {
 			return
 		}
 
-		sectionTitle = c.Controls.Employers.Expanded.Title
+		sectionTitle = control.Expanded.Title
 	}
 
 	pdfSectionTitle(pdf, sectionTitle)
@@ -249,23 +253,23 @@ func pdfProfessionalExperience(pdf *gofpdf.Fpdf, c *Configuration, condensed boo
 	bulletCellWidth := float64(7)
 	bulletPointWidth := (WorkingPageWidth - bulletCellWidth)
 
-	employersCount := 0
-	maxBulletPointsCount := c.Controls.Employers.Expanded.BulletPoints.Start
+	organizationsCount := 0
+	maxBulletPointsCount := control.Expanded.BulletPoints.Start
 
-	var singleEmployerHeightGuideline float64
+	var singleOrganizationHeightGuideline float64
 	organizationNeedsNewline := true
 
 organizations_loop:
-	for ei, organization := range c.Employment {
+	for coi, organization := range *co {
 		if organization.Used {
 			continue
 		}
 
 		var addOrganization = func() bool {
-			c.Employment[ei].Used = true
+			(*co)[coi].Used = true
 
-			if employersCount == 0 {
-				singleEmployerHeightGuideline = pdf.GetY()
+			if organizationsCount == 0 {
+				singleOrganizationHeightGuideline = pdf.GetY()
 			}
 
 			// Line 1
@@ -276,21 +280,21 @@ organizations_loop:
 			fontSize := float64(11)
 			lineBreak := fontSize
 
-			// We need a double break to create separation between fully-rendered positions
-			if (len(organization.Positions) == 1) || (c.Controls.Employers.Expanded.CollapseMultiplePositions != CollapseMultiplePositionsFull) {
+			// We need a single break when collapsing to the first position only
+			if (len(organization.Positions) == 1) || (control.Expanded.CollapseMultiplePositions != CollapseMultiplePositionsFull) {
 				lineBreak /= 2
 			}
 
 			pdf.SetFont(DefaultFont, FontStyleItalic, fontSize)
 
-			var employerExtra string
+			var organizationExtra string
 
 			if organization.OrganizationExtra != "" {
-				employerExtra = fmt.Sprintf(" (%s)", organization.OrganizationExtra)
+				organizationExtra = fmt.Sprintf(" (%s)", organization.OrganizationExtra)
 			}
 
 			organizationWidth := pdf.GetStringWidth(organization.Organization)
-			organizationExtraWidth := pdf.GetStringWidth(employerExtra)
+			organizationExtraWidth := pdf.GetStringWidth(organizationExtra)
 
 			fontSize = float64(10)
 
@@ -308,7 +312,7 @@ organizations_loop:
 			pdf.CellFormat(organizationWidth, fontSize, organization.Organization, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignLeft, false, 0, organization.Url)
 
 			if organizationExtraWidth > 0 {
-				pdf.Cell(organizationExtraWidth, fontSize, employerExtra)
+				pdf.Cell(organizationExtraWidth, fontSize, organizationExtra)
 			}
 
 			fontSize = float64(10)
@@ -325,6 +329,7 @@ organizations_loop:
 			pdf.SetFont(DefaultFont, FontStyleBold, fontSize)
 
 			positionsListed := 0
+			maxPositionIndex := (len(organization.Positions) - 1)
 
 		positions_loop:
 			for epi, position := range organization.Positions {
@@ -333,51 +338,68 @@ organizations_loop:
 				}
 
 				var addPosition = func() bool {
-					c.Employment[ei].Positions[epi].Used = true
+					var addPositionTitleLine = func(i int, p ConfigurationOrganizationPosition, renderLineBreak bool) {
+						(*co)[coi].Positions[i].Used = true
 
-					positionsListed++
+						positionsListed++
 
-					var title, flavor string
+						var title, flavor string
 
-					if position.NormalizedTitle != "" {
-						title = position.NormalizedTitle
-					} else {
-						title = position.Title
-					}
+						if position.NormalizedTitle != "" {
+							title = p.NormalizedTitle
+						} else {
+							title = p.Title
+						}
 
-					if position.Flavor != "" {
-						flavor = fmt.Sprintf(" - %s", position.Flavor)
-					}
+						if p.Flavor != "" {
+							flavor = fmt.Sprintf(" - %s", position.Flavor)
+						}
 
-					dates := fmt.Sprintf("%s to %s", position.Dates.Start, position.Dates.End)
+						dates := fmt.Sprintf("%s to %s", p.Dates.Start, p.Dates.End)
 
-					titleWidth := pdf.GetStringWidth(title)
-					datesWidth := pdf.GetStringWidth(dates)
+						titleWidth := pdf.GetStringWidth(title)
+						datesWidth := pdf.GetStringWidth(dates)
 
-					pdf.SetFontStyle(FontStyleNormal)
-
-					flavorWidth := pdf.GetStringWidth(flavor)
-
-					pad := (WorkingPageWidth - titleWidth - flavorWidth - datesWidth)
-
-					pdf.SetFontStyle(FontStyleBold)
-					pdf.Cell(titleWidth, fontSize, title)
-
-					if flavorWidth > 0 {
 						pdf.SetFontStyle(FontStyleNormal)
-						pdf.Cell(flavorWidth, fontSize, flavor)
+
+						flavorWidth := pdf.GetStringWidth(flavor)
+
+						pad := (WorkingPageWidth - titleWidth - flavorWidth - datesWidth)
+
+						pdf.SetFontStyle(FontStyleBold)
+						pdf.Cell(titleWidth, fontSize, title)
+
+						if flavorWidth > 0 {
+							pdf.SetFontStyle(FontStyleNormal)
+							pdf.Cell(flavorWidth, fontSize, flavor)
+						}
+
+						pdf.SetFontStyle(FontStyleBold)
+						pdf.CellFormat((datesWidth + pad), fontSize, dates, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignRight, false, 0, "")
+
+						if renderLineBreak {
+							pdf.Ln(lineBreak)
+						}
 					}
 
-					pdf.SetFontStyle(FontStyleBold)
-					pdf.CellFormat((datesWidth + pad), fontSize, dates, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignRight, false, 0, "")
+					addPositionTitleLine(epi, position, (epi < maxPositionIndex))
+
+					// If we're collapsing positions into titles only, then render them
+					if control.Expanded.CollapseMultiplePositions == CollapseMultiplePositionsTitlesOnly {
+						for epi2, position := range organization.Positions {
+							if position.Used {
+								continue
+							}
+
+							addPositionTitleLine(epi2, position, (!condensed || (epi2 < maxPositionIndex)))
+						}
+					}
 
 					if condensed {
 						return true
 					}
 
 					// Possible line 3: position summary
-					pdf.Ln(lineBreak)
-
 					if position.Summary != "" {
 						fontSize = float64(11)
 
@@ -448,16 +470,16 @@ organizations_loop:
 						bulletPointsCount++
 
 						if bulletPointsCount == maxBulletPointsCount {
-							maxBulletPointsCount -= c.Controls.Employers.Expanded.BulletPoints.Decrement
+							maxBulletPointsCount -= control.Expanded.BulletPoints.Decrement
 
 							break
 						}
 					}
 
-					return c.Controls.Employers.Expanded.CollapseMultiplePositions == CollapseMultiplePositionsCollapse
+					return control.Expanded.CollapseMultiplePositions == CollapseMultiplePositionsCollapse
 				}
 
-				if len(c.Controls.Employers.Expanded.PositionTags) == 0 {
+				if len(control.Expanded.PositionTags) == 0 {
 					if addPosition() {
 						break positions_loop
 					}
@@ -466,7 +488,7 @@ organizations_loop:
 					// Iterate through this position's tags
 					for _, positionTag := range position.Tags {
 						// Iterate through the tags we're targeting
-						for _, controlTag := range c.Controls.Employers.Expanded.PositionTags {
+						for _, controlTag := range control.Expanded.PositionTags {
 							if positionTag == controlTag {
 								if addPosition() {
 									break positions_loop
@@ -481,34 +503,34 @@ organizations_loop:
 
 			pdf.Ln(3)
 
-			employersCount++
+			organizationsCount++
 
 			organizationNeedsNewline = true
 
-			if employersCount == 1 {
-				singleEmployerHeightGuideline = (pdf.GetY() - singleEmployerHeightGuideline)
+			if organizationsCount == 1 {
+				singleOrganizationHeightGuideline = (pdf.GetY() - singleOrganizationHeightGuideline)
 			} else {
 				y := pdf.GetY()
 				_, _, _, bottom := pdf.GetMargins()
 				_, height := pdf.GetPageSize()
 
-				if (y + singleEmployerHeightGuideline) > (height - bottom) {
+				if (y + singleOrganizationHeightGuideline) > (height - bottom) {
 					pdf.AddPage()
 
 					organizationNeedsNewline = false
 				}
 			}
 
-			if !condensed && (employersCount == int(c.Controls.Employers.Expanded.Count)) {
+			if !condensed && (organizationsCount == int(control.Expanded.Count)) {
 				return true
-			} else if condensed && (employersCount == int(c.Controls.Employers.Condensed.Count)) {
+			} else if condensed && (organizationsCount == int(control.Condensed.Count)) {
 				return true
 			}
 
 			return false
 		}
 
-		if len(c.Controls.Employers.Expanded.Tags) == 0 {
+		if len(control.Expanded.Tags) == 0 {
 			if addOrganization() {
 				break organizations_loop
 			}
@@ -517,7 +539,7 @@ organizations_loop:
 			// Iterate through this organization's tags
 			for _, organizationTag := range organization.Tags {
 				// Iterate through the tags we're targeting
-				for _, controlTag := range c.Controls.Employers.Expanded.Tags {
+				for _, controlTag := range control.Expanded.Tags {
 					if organizationTag == controlTag {
 						if addOrganization() {
 							break organizations_loop
