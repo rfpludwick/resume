@@ -12,4 +12,5 @@
 - Investigate using hand-picked fonts rather than the built-in ones
 - Make the new page detection in employment history more robust, since employers
   & positions can be differing heights
-- Investigate adding support for resume JSON Spec.
+- Investigate adding support for resume JSON Spec
+- Make design functionality a plugin/module system to allow for multiple designs
