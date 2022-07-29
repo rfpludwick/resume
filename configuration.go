@@ -36,6 +36,7 @@ type ConfigurationControls struct {
 	Politics       ConfigurationControlsOrganizations `yaml:"politics"`
 	Education      ConfigurationControlCountTagged    `yaml:"education"`
 	Certifications ConfigurationControlCountTagged    `yaml:"certifications"`
+	Projects       ConfigurationControlCountTagged    `yaml:"projects"`
 }
 
 type ConfigurationControlsPdf struct {
@@ -141,6 +142,7 @@ type ConfigurationProject struct {
 	Url          string             `yaml:"url"`
 	Location     string             `yaml:"location"`
 	Role         string             `yaml:"role"`
+	Summary      string             `yaml:"summary"`
 	Dates        ConfigurationDates `yaml:"dates"`
 	BulletPoints []string           `yaml:"bullet_points,flow"`
 	Tags         []string           `yaml:"tags"`

@@ -1,8 +1,7 @@
 # TODO
 
-- Add in organization positions show full logic
 - Add positions count control logic to expanded & condensed
-- Add in projects logic
+- Add in organization positions show full logic
 - Find more places to make configurable instead of hardcoded
 - Add CLI params for certain overrides (define this first)
 - Investigate better solution for newline/multi whitespace trimming in configuration
@@ -14,3 +13,4 @@
   & positions can be differing heights
 - Investigate adding support for resume JSON Spec
 - Make design functionality a plugin/module system to allow for multiple designs
+- Determine better way to inject page breaks before **any** section

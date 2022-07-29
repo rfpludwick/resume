@@ -41,14 +41,15 @@ func main() {
 	pdfContactLine(pdf, c)
 	pdfSkillsSection(pdf, &c.Skills, &c.Controls.Skills.First)
 	pdfSkillsSection(pdf, &c.Skills, &c.Controls.Skills.Second)
-	pefOrganizationalExperience(pdf, &c.Employment, &c.Controls.Employers, false)
-	pefOrganizationalExperience(pdf, &c.Employment, &c.Controls.Employers, true)
-	pefOrganizationalExperience(pdf, &c.Politics, &c.Controls.Politics, false)
-	pefOrganizationalExperience(pdf, &c.Politics, &c.Controls.Politics, true)
-	pefOrganizationalExperience(pdf, &c.Volunteering, &c.Controls.Volunteering, false)
-	pefOrganizationalExperience(pdf, &c.Volunteering, &c.Controls.Volunteering, true)
+	pdfOrganizationalExperience(pdf, &c.Employment, &c.Controls.Employers, false)
+	pdfOrganizationalExperience(pdf, &c.Employment, &c.Controls.Employers, true)
+	pdfOrganizationalExperience(pdf, &c.Politics, &c.Controls.Politics, false)
+	pdfOrganizationalExperience(pdf, &c.Politics, &c.Controls.Politics, true)
+	pdfOrganizationalExperience(pdf, &c.Volunteering, &c.Controls.Volunteering, false)
+	pdfOrganizationalExperience(pdf, &c.Volunteering, &c.Controls.Volunteering, true)
 	pdfSkillsSection(pdf, &c.Skills, &c.Controls.Skills.Third)
 	pdfEducation(pdf, c)
+	pdfProjects(pdf, c)
 	pdfCertifications(pdf, c)
 
 	writePdf(pdf, c)
@@ -231,7 +232,7 @@ skills_loop:
 	}
 }
 
-func pefOrganizationalExperience(pdf *gofpdf.Fpdf, co *[]ConfigurationOrganization, control *ConfigurationControlsOrganizations, condensed bool) {
+func pdfOrganizationalExperience(pdf *gofpdf.Fpdf, co *[]ConfigurationOrganization, control *ConfigurationControlsOrganizations, condensed bool) {
 	var sectionTitle string
 
 	if condensed {
@@ -377,12 +378,12 @@ organizations_loop:
 						pdf.SetFontStyle(FontStyleBold)
 						pdf.CellFormat((datesWidth + pad), fontSize, dates, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignRight, false, 0, "")
 
-						if renderLineBreak {
+						if !condensed && renderLineBreak {
 							pdf.Ln(lineBreak)
 						}
 					}
 
-					addPositionTitleLine(epi, position, (epi < maxPositionIndex))
+					addPositionTitleLine(epi, position, ((epi < maxPositionIndex) || (len(position.Summary) > 0)))
 
 					// If we're collapsing positions into titles only, then render them
 					if control.Expanded.CollapseMultiplePositions == CollapseMultiplePositionsTitlesOnly {
@@ -391,7 +392,7 @@ organizations_loop:
 								continue
 							}
 
-							addPositionTitleLine(epi2, position, (!condensed || (epi2 < maxPositionIndex)))
+							addPositionTitleLine(epi2, position, (epi2 < maxPositionIndex))
 						}
 					}
 
@@ -625,6 +626,205 @@ education_loop:
 					if educationTag == controlTag {
 						if addEducation() {
 							break education_loop
+						}
+
+						break controls_tags_loop
+					}
+				}
+			}
+		}
+	}
+}
+
+func pdfProjects(pdf *gofpdf.Fpdf, c *Configuration) {
+	if (c.Controls.Projects.Count == 0) || (len(c.Projects) == 0) {
+		return
+	}
+
+	// todo find infinite loop / logic error in this function
+
+	pdfSectionTitle(pdf, c.Controls.Projects.Title)
+
+	bulletCellWidth := float64(7)
+	bulletPointWidth := (WorkingPageWidth - bulletCellWidth)
+
+	projectsCount := 0
+
+	var singleProjectHeightGuideline float64
+	projectNeedsNewline := true
+
+projects_loop:
+	for pi, project := range c.Projects {
+		if project.Used {
+			continue
+		}
+
+		var addProject = func() bool {
+			c.Projects[pi].Used = true
+
+			if projectsCount == 0 {
+				singleProjectHeightGuideline = pdf.GetY()
+			}
+
+			// Line 1
+			if projectNeedsNewline {
+				pdf.Ln(8)
+			}
+
+			fontSize := float64(11)
+			lineBreak := (fontSize / 2)
+
+			pdf.SetFont(DefaultFont, FontStyleItalic, fontSize)
+
+			titleWidth := pdf.GetStringWidth(project.Title)
+
+			fontSize = float64(10)
+
+			pdf.SetFontSize(fontSize)
+
+			locationWidth := pdf.GetStringWidth(project.Location)
+
+			pad := (WorkingPageWidth - titleWidth - locationWidth)
+
+			fontSize = float64(11)
+
+			pdf.SetFontSize(fontSize)
+
+			pdf.Bookmark(project.Title, 1, -1)
+			pdf.CellFormat(titleWidth, fontSize, project.Title, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignLeft, false, 0, project.Url)
+
+			fontSize = float64(10)
+
+			pdf.SetFontSize(fontSize)
+
+			pdf.CellFormat((locationWidth + pad), fontSize, project.Location, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignRight, false, 0, "")
+			pdf.Ln(lineBreak)
+
+			// Line 2: role start
+			fontSize = float64(12)
+			lineBreak = (fontSize / 2)
+
+			pdf.SetFont(DefaultFont, FontStyleBold, fontSize)
+
+			dates := fmt.Sprintf("%s to %s", project.Dates.Start, project.Dates.End)
+
+			roleWidth := pdf.GetStringWidth(project.Role)
+			datesWidth := pdf.GetStringWidth(dates)
+
+			pdf.SetFontStyle(FontStyleNormal)
+
+			pad = (WorkingPageWidth - roleWidth - datesWidth)
+
+			pdf.SetFontStyle(FontStyleBold)
+			pdf.Cell(roleWidth, fontSize, project.Role)
+
+			pdf.SetFontStyle(FontStyleBold)
+			pdf.CellFormat((datesWidth + pad), fontSize, dates, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignRight, false, 0, "")
+
+			pdf.Ln(lineBreak) // todo determine if necessary
+
+			// Possible line 3: project summary
+			if project.Summary != "" {
+				fontSize = float64(11)
+
+				pdf.SetFont(DefaultFont, FontStyleNormal, fontSize)
+
+				pdf.Cell(0, fontSize, project.Summary)
+
+				pdf.Ln(fontSize)
+			}
+
+			// Lines 4+: bullet points
+			fontSize = float64(11)
+			lineBreak = (fontSize / 2)
+
+			for bpi, bulletPoint := range project.BulletPoints {
+				if bpi > 0 {
+					pdf.Ln(lineBreak)
+				}
+
+				linesCount := 0
+				bulletPointParts := strings.Split(bulletPoint, " ")
+
+				for {
+					var bullet string
+					bulletPointsCollected := []string{}
+
+					if linesCount == 0 {
+						bullet = string(rune(117))
+					} else {
+						pdf.Ln(lineBreak)
+
+						bullet = ""
+					}
+
+					pdf.SetFont("Symbol", FontStyleNormal, float64(6)) // Small bullets
+
+					pdf.Cell(bulletCellWidth, fontSize, bullet)
+
+					pdf.SetFont(DefaultFont, FontStyleNormal, fontSize)
+
+					for _, bulletPointPart := range bulletPointParts {
+						bulletPointsCollected = append(bulletPointsCollected, bulletPointPart)
+
+						if pdf.GetStringWidth(strings.Join(bulletPointsCollected, " ")) > bulletPointWidth {
+							sliceRight := len(bulletPointsCollected) - 1
+
+							pdf.Cell(0, fontSize, strings.Join(bulletPointsCollected[0:sliceRight], " "))
+
+							bulletPointParts = bulletPointParts[sliceRight:]
+							bulletPointsCollected = []string{}
+						}
+					}
+
+					bulletPointPartsCount := len(bulletPointParts)
+
+					if (bulletPointPartsCount == 0) || (bulletPointPartsCount == len(bulletPointsCollected)) {
+						pdf.Cell(0, fontSize, strings.Join(bulletPointsCollected, " "))
+
+						break
+					}
+
+					linesCount++
+				}
+			}
+
+			pdf.Ln(3)
+
+			projectsCount++
+
+			projectNeedsNewline = true
+
+			if projectsCount == 1 {
+				singleProjectHeightGuideline = (pdf.GetY() - singleProjectHeightGuideline)
+			} else {
+				y := pdf.GetY()
+				_, _, _, bottom := pdf.GetMargins()
+				_, height := pdf.GetPageSize()
+
+				if (y + singleProjectHeightGuideline) > (height - bottom) {
+					pdf.AddPage()
+
+					projectNeedsNewline = false
+				}
+			}
+
+			return projectsCount == int(c.Controls.Projects.Count)
+		}
+
+		if len(c.Controls.Projects.Tags) == 0 {
+			if addProject() {
+				break projects_loop
+			}
+		} else {
+		controls_tags_loop:
+			// Iterate through this project's tags
+			for _, projectTag := range project.Tags {
+				// Iterate through the tags we're targeting
+				for _, controlTag := range c.Controls.Projects.Tags {
+					if projectTag == controlTag {
+						if addProject() {
+							break projects_loop
 						}
 
 						break controls_tags_loop
