@@ -49,6 +49,7 @@ employers:
   condensed:
     title: Additional Professional Experience
     count: 3
+    collapse_multiple_positions: collapse
     tags:
       - mainline
 volunteering:

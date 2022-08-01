@@ -70,17 +70,27 @@ type ConfigurationControlsSkills struct {
 }
 
 type ConfigurationControlsOrganizations struct {
-	Expanded  ConfigurationControlsOrganizationExpanded `yaml:"expanded"`
-	Condensed ConfigurationControlCountTagged           `yaml:"condensed"`
+	Expanded  ConfigurationControlsOrganizationExpanded  `yaml:"expanded"`
+	Condensed ConfigurationControlsOrganizationCondensed `yaml:"condensed"`
 }
 
 type ConfigurationControlsOrganizationExpanded struct {
 	Title                     string                                             `yaml:"title"`
 	Count                     uint                                               `yaml:"count"`
+	PositionsCount            uint                                               `yaml:"positions_count"`
 	BulletPoints              ConfigurationControlsEmployersExpandedBulletPoints `yaml:"bullet_points"`
 	CollapseMultiplePositions string                                             `yaml:"collapse_multiple_positions"`
 	Tags                      []string                                           `yaml:"tags"`
 	PositionTags              []string                                           `yaml:"position_tags"`
+}
+
+type ConfigurationControlsOrganizationCondensed struct {
+	Title                     string   `yaml:"title"`
+	Count                     uint     `yaml:"count"`
+	PositionsCount            uint     `yaml:"positions_count"`
+	CollapseMultiplePositions string   `yaml:"collapse_multiple_positions"`
+	Tags                      []string `yaml:"tags"`
+	PositionTags              []string `yaml:"position_tags"`
 }
 
 type ConfigurationControlsEmployersExpandedBulletPoints struct {

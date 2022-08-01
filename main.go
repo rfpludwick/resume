@@ -233,20 +233,26 @@ skills_loop:
 }
 
 func pdfOrganizationalExperience(pdf *gofpdf.Fpdf, co *[]ConfigurationOrganization, control *ConfigurationControlsOrganizations, condensed bool) {
+	if len(*co) == 0 {
+		return
+	}
+
 	var sectionTitle string
+	var controlCount uint
+	var controlCollapseMultiplePositions string
 
 	if condensed {
-		if (control.Condensed.Count == 0) || (len(*co) == 0) {
-			return
-		}
-
 		sectionTitle = control.Condensed.Title
+		controlCount = control.Condensed.Count
+		controlCollapseMultiplePositions = control.Condensed.CollapseMultiplePositions
 	} else {
-		if (control.Expanded.Count == 0) || (len(*co) == 0) {
-			return
-		}
-
 		sectionTitle = control.Expanded.Title
+		controlCount = control.Expanded.Count
+		controlCollapseMultiplePositions = control.Expanded.CollapseMultiplePositions
+	}
+
+	if controlCount == 0 {
+		return
 	}
 
 	pdfSectionTitle(pdf, sectionTitle)
@@ -254,7 +260,7 @@ func pdfOrganizationalExperience(pdf *gofpdf.Fpdf, co *[]ConfigurationOrganizati
 	bulletCellWidth := float64(7)
 	bulletPointWidth := (WorkingPageWidth - bulletCellWidth)
 
-	organizationsCount := 0
+	organizationsCount := uint(0)
 	maxBulletPointsCount := control.Expanded.BulletPoints.Start
 
 	var singleOrganizationHeightGuideline float64
@@ -282,7 +288,11 @@ organizations_loop:
 			lineBreak := fontSize
 
 			// We need a single break when collapsing to the first position only
-			if (len(organization.Positions) == 1) || (control.Expanded.CollapseMultiplePositions != CollapseMultiplePositionsFull) {
+			if len(organization.Positions) == 1 {
+				lineBreak /= 2
+			} else if condensed {
+				lineBreak /= 2
+			} else if controlCollapseMultiplePositions != CollapseMultiplePositionsFull {
 				lineBreak /= 2
 			}
 
@@ -324,13 +334,10 @@ organizations_loop:
 			pdf.Ln(lineBreak)
 
 			// Line 2: position start
-			fontSize = float64(12)
-			lineBreak = (fontSize / 2)
-
-			pdf.SetFont(DefaultFont, FontStyleBold, fontSize)
-
-			positionsListed := 0
+			positionsCount := uint(0)
 			maxPositionIndex := (len(organization.Positions) - 1)
+
+			positionNeedsNewline := false
 
 		positions_loop:
 			for epi, position := range organization.Positions {
@@ -339,10 +346,19 @@ organizations_loop:
 				}
 
 				var addPosition = func() bool {
+					if positionNeedsNewline {
+						pdf.Ln(8)
+					}
+
 					var addPositionTitleLine = func(i int, p ConfigurationOrganizationPosition, renderLineBreak bool) {
 						(*co)[coi].Positions[i].Used = true
 
-						positionsListed++
+						positionsCount++
+
+						fontSize = float64(12)
+						lineBreak = (fontSize / 2)
+
+						pdf.SetFont(DefaultFont, FontStyleBold, fontSize)
 
 						var title, flavor string
 
@@ -378,15 +394,22 @@ organizations_loop:
 						pdf.SetFontStyle(FontStyleBold)
 						pdf.CellFormat((datesWidth + pad), fontSize, dates, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignRight, false, 0, "")
 
-						if !condensed && renderLineBreak {
+						if renderLineBreak {
 							pdf.Ln(lineBreak)
 						}
 					}
 
-					addPositionTitleLine(epi, position, ((epi < maxPositionIndex) || (len(position.Summary) > 0)))
+					firstLineBreak := ((epi < maxPositionIndex) || (len(position.Summary) > 0))
+					collapseTitlesOnly := controlCollapseMultiplePositions == CollapseMultiplePositionsTitlesOnly
+
+					if condensed {
+						firstLineBreak = firstLineBreak && collapseTitlesOnly
+					}
+
+					addPositionTitleLine(epi, position, firstLineBreak)
 
 					// If we're collapsing positions into titles only, then render them
-					if control.Expanded.CollapseMultiplePositions == CollapseMultiplePositionsTitlesOnly {
+					if collapseTitlesOnly {
 						for epi2, position := range organization.Positions {
 							if position.Used {
 								continue
@@ -395,6 +418,8 @@ organizations_loop:
 							addPositionTitleLine(epi2, position, (epi2 < maxPositionIndex))
 						}
 					}
+
+					positionNeedsNewline = true
 
 					if condensed {
 						return true
@@ -477,10 +502,26 @@ organizations_loop:
 						}
 					}
 
-					return control.Expanded.CollapseMultiplePositions == CollapseMultiplePositionsCollapse
+					if control.Expanded.CollapseMultiplePositions == CollapseMultiplePositionsCollapse {
+						return true
+					} else if !condensed && (positionsCount == control.Expanded.PositionsCount) {
+						return true
+					} else if condensed && (positionsCount == control.Condensed.PositionsCount) {
+						return true
+					}
+
+					return false
 				}
 
-				if len(control.Expanded.PositionTags) == 0 {
+				var positionTags []string
+
+				if condensed {
+					positionTags = control.Condensed.PositionTags
+				} else {
+					positionTags = control.Expanded.PositionTags
+				}
+
+				if len(positionTags) == 0 {
 					if addPosition() {
 						break positions_loop
 					}
@@ -489,7 +530,7 @@ organizations_loop:
 					// Iterate through this position's tags
 					for _, positionTag := range position.Tags {
 						// Iterate through the tags we're targeting
-						for _, controlTag := range control.Expanded.PositionTags {
+						for _, controlTag := range positionTags {
 							if positionTag == controlTag {
 								if addPosition() {
 									break positions_loop
@@ -522,9 +563,9 @@ organizations_loop:
 				}
 			}
 
-			if !condensed && (organizationsCount == int(control.Expanded.Count)) {
+			if !condensed && (organizationsCount == control.Expanded.Count) {
 				return true
-			} else if condensed && (organizationsCount == int(control.Condensed.Count)) {
+			} else if condensed && (organizationsCount == control.Condensed.Count) {
 				return true
 			}
 
@@ -561,7 +602,7 @@ func pdfEducation(pdf *gofpdf.Fpdf, c *Configuration) {
 
 	pdfSectionTitle(pdf, c.Controls.Education.Title)
 
-	educationCount := 0
+	educationCount := uint(0)
 
 	pdf.Ln(8)
 
@@ -610,7 +651,7 @@ education_loop:
 
 			educationCount++
 
-			return educationCount == int(c.Controls.Education.Count)
+			return educationCount == c.Controls.Education.Count
 		}
 
 		if len(c.Controls.Education.Tags) == 0 {
@@ -648,7 +689,7 @@ func pdfProjects(pdf *gofpdf.Fpdf, c *Configuration) {
 	bulletCellWidth := float64(7)
 	bulletPointWidth := (WorkingPageWidth - bulletCellWidth)
 
-	projectsCount := 0
+	projectsCount := uint(0)
 
 	var singleProjectHeightGuideline float64
 	projectNeedsNewline := true
@@ -809,7 +850,7 @@ projects_loop:
 				}
 			}
 
-			return projectsCount == int(c.Controls.Projects.Count)
+			return projectsCount == c.Controls.Projects.Count
 		}
 
 		if len(c.Controls.Projects.Tags) == 0 {
@@ -842,7 +883,7 @@ func pdfCertifications(pdf *gofpdf.Fpdf, c *Configuration) {
 
 	pdfSectionTitle(pdf, c.Controls.Certifications.Title)
 
-	certificationsCount := 0
+	certificationsCount := uint(0)
 
 	pdf.Ln(8)
 
@@ -900,7 +941,7 @@ certifications_loop:
 
 			certificationsCount++
 
-			return certificationsCount == int(c.Controls.Certifications.Count)
+			return certificationsCount == c.Controls.Certifications.Count
 		}
 
 		if len(c.Controls.Certifications.Tags) == 0 {
