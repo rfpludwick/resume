@@ -360,7 +360,7 @@ organizations_loop:
 
 						pdf.SetFont(DefaultFont, FontStyleBold, fontSize)
 
-						var title, flavor string
+						var title, flavor, startDate string
 
 						if position.NormalizedTitle != "" {
 							title = p.NormalizedTitle
@@ -372,7 +372,13 @@ organizations_loop:
 							flavor = fmt.Sprintf(" - %s", position.Flavor)
 						}
 
-						dates := fmt.Sprintf("%s to %s", p.Dates.Start, p.Dates.End)
+						if controlCollapseMultiplePositions == CollapseMultiplePositionsCollapse {
+							startDate = (*co)[coi].Positions[len((*co)[coi].Positions)-1].Dates.Start
+						} else {
+							startDate = p.Dates.Start
+						}
+
+						dates := fmt.Sprintf("%s to %s", startDate, p.Dates.End)
 
 						titleWidth := pdf.GetStringWidth(title)
 						datesWidth := pdf.GetStringWidth(dates)

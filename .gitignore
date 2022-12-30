@@ -1,5 +1,6 @@
 *.pdf
 .devcontainer/*-local.sh
+.DS_Store
 bin/
 conf/resume/secret.yaml
 ./resume
