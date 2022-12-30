@@ -1,6 +1,5 @@
 {
 	"window.title": "${activeEditorMedium}${dirty}${separator}Resume${separator}${appName}",
-	"go.toolsGopath": "/usr/lib/go",
 	"cSpell.words": [
 		"Clackamas",
 		"Dambert",
