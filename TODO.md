@@ -1,6 +1,5 @@
 # TODO
 
-- Fix date range rendering when condensing all job titles into a single line
 - Find more places to make configurable instead of hardcoded
 - Add CLI params for certain overrides (define this first)
 - Investigate better solution for newline/multi whitespace trimming in configuration
