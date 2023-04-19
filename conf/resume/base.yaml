@@ -701,6 +701,22 @@ employment:
       - technical_support
       - mainline
 volunteering:
+  - organization: Edgewater on the Tualatin HOA
+    location: "King City, OR"
+    positions:
+      - title: ARC Committee Member
+        summary: |
+          Tasked with reviewing exterior architectural requests for approval. Also
+          responsible for helping ensure general "look and feel" of community stays
+          cohesive.
+        dates:
+          start: Apr. 2023
+        tags:
+          - hoa
+          - architecture
+    tags:
+      - hoa
+      - architecture
   - organization: Clackamas Traffic Safety Commission
     url: "https://www.clackamas.us/meetings/engineering/tsc"
     location: "Clackamas County, OR"
