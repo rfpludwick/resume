@@ -131,13 +131,15 @@ func pdfContactLine(pdf *gofpdf.Fpdf, c *Configuration) {
 
 	pdf.SetFont(DefaultFont, FontStyleNormal, fontSize)
 
+	pronounsLength := pdf.GetStringWidth(c.Contact.Pronouns)
 	emailAddressLength := pdf.GetStringWidth(c.Contact.EmailAddress)
 	phoneNumberLength := pdf.GetStringWidth(c.Contact.PhoneNumber)
 	urlLength := pdf.GetStringWidth(c.Contact.Url)
 	locationLength := pdf.GetStringWidth(c.Contact.Location)
-	pad := ((WorkingPageWidth - emailAddressLength - phoneNumberLength - urlLength - locationLength) / 3)
+	pad := ((WorkingPageWidth - pronounsLength - emailAddressLength - phoneNumberLength - urlLength - locationLength) / 4)
 
-	pdf.CellFormat(emailAddressLength, fontSize, c.Contact.EmailAddress, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignLeft, false, 0, "mailto:"+c.Contact.EmailAddress)
+	pdf.CellFormat(pronounsLength, fontSize, c.Contact.Pronouns, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignLeft, false, 0, "")
+	pdf.CellFormat((emailAddressLength + pad), fontSize, c.Contact.EmailAddress, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignRight, false, 0, "mailto:"+c.Contact.EmailAddress)
 	pdf.CellFormat((phoneNumberLength + pad), fontSize, c.Contact.PhoneNumber, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignRight, false, 0, "tel:"+phoneNumberReplacer.Replace(c.Contact.PhoneNumber))
 	pdf.CellFormat((urlLength + pad), fontSize, c.Contact.Url, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignRight, false, 0, c.Contact.Url)
 	pdf.CellFormat((locationLength + pad), fontSize, c.Contact.Location, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignRight, false, 0, "")

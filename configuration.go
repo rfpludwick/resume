@@ -106,6 +106,7 @@ type ConfigurationControlCountTagged struct {
 
 type ConfigurationContact struct {
 	Name         string `yaml:"name"`
+	Pronouns     string `yaml:"pronouns"`
 	EmailAddress string `yaml:"email_address"`
 	PhoneNumber  string `yaml:"phone_number"`
 	Url          string `yaml:"url"`
