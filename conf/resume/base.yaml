@@ -141,6 +141,9 @@ skills:
   - name: Packer
     tags:
       - technical
+  - name: Concourse CI
+    tags:
+      - technical
   - name: Buildkite
     tags:
       - technical
@@ -177,16 +180,16 @@ skills:
   - name: Design Patterns
     tags:
       - technical
+  - name: Jekyll
+    tags:
+      - technical
   - name: AngularJS
     tags:
       - technical
   - name: Redis
     tags:
       - technical
-  - name: Apache
-    tags:
-      - technical
-  - name: Raspberry Pi
+  - name: Apache HTTP Server
     tags:
       - technical
   - name: Vagrant
@@ -217,6 +220,21 @@ skills:
     tags:
       - technical
   - name: Memcached
+    tags:
+      - technical
+  - name: SonarQube
+    tags:
+      - technical
+  - name: Certbot
+    tags:
+      - technical
+  - name: "Let's Encrypt"
+    tags:
+      - technical
+  - name: Asciidoc
+    tags:
+      - technical
+  - name: Antora
     tags:
       - technical
   - name: "E-commerce"
@@ -267,13 +285,13 @@ skills:
   - name: AWS Transit Gateway
     tags:
       - aws
-  - name: GitHub
+  - name: "GitHub (Public & Enterprise)"
     tags:
       - tools
   - name: Slack
     tags:
       - tools
-  - name: Jira
+  - name: Atlassian Jira
     tags:
       - tools
   - name: VSCode
@@ -291,6 +309,12 @@ skills:
   - name: VeraCrypt
     tags:
       - tools
+  - name: Sonatype Nexus
+    tags:
+      - tools
+  - name: JFrog Artifactory
+    tags:
+      - tools
   - name: VirtualBox
     tags:
       - tools
@@ -298,6 +322,9 @@ skills:
     tags:
       - hardware
   - name: Synology NAS
+    tags:
+      - hardware
+  - name: Raspberry Pi
     tags:
       - hardware
 employment:
@@ -310,7 +337,7 @@ employment:
         flavor: UI Platform
         summary: |
           Manager for DevOps team owning multiple service pipelines as well as
-          AWS/Kubernetes infrastructure.
+          AWS/Kubernetes CI infrastructure.
         dates:
           start: Apr. 2021
           end: Present
@@ -319,11 +346,8 @@ employment:
             Replaced aging self-managed Kubernetes infrastructure with greenfield
             EKS-based infrastructure.
           - |
-            Started transition of Jenkins-based CI/CD to modern Tekton, Prow,
-            & Flux-based CI/CD platform.
-          - |
-            Introduced multiple DevSecOps tools and processes to harden the automation
-            toolchain, such as x-ray and Snyk.
+            Engaged with multi-organizational effort to introduce new scalable,
+            centralized CI system for all of Workday.
           - |
             Implemented on-call rotation to streamline operational responsibilities
             & respond to after-hours incidents, resulting in greater throughput
@@ -334,6 +358,9 @@ employment:
           - |
             Shifted deployment responsibilities further left to service development
             teams by streamlining interfaces and automating many manual tasks.
+          - |
+            Improved and strengthened organizational culture and morale while participating
+            in cultural working group.
         tags:
           - software_engineering
           - leadership

@@ -1,6 +1,7 @@
 {
 	"window.title": "${activeEditorMedium}${dirty}${separator}Resume${separator}${appName}",
 	"cSpell.words": [
+		"Antora",
 		"Clackamas",
 		"Dambert",
 		"fanbase",
@@ -12,11 +13,13 @@
 		"imdario",
 		"Laravel",
 		"Playtika",
+		"Qube",
 		"rearchitecting",
 		"ruleset",
 		"rulesets",
 		"SDLC",
 		"Snyk",
+		"Sonatype",
 		"Tekton",
 		"toolset",
 		"UNLV",
