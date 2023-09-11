@@ -5,6 +5,7 @@ import (
 	"encoding/base64"
 	"fmt"
 	"io"
+	"log"
 	"os"
 	"strings"
 	"time"
@@ -97,7 +98,11 @@ func pdfGlobal(c *Configuration) *gofpdf.Fpdf {
 			pdf.PageNo())
 
 		hasher := sha1.New()
-		io.WriteString(hasher, footer)
+
+		if _, err := io.WriteString(hasher, footer); err != nil {
+			log.Fatal("Error writing footer into hasher:", err)
+		}
+
 		hash := base64.URLEncoding.EncodeToString(hasher.Sum(nil))
 
 		hashWidth := pdf.GetStringWidth(hash)
