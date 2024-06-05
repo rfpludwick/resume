@@ -46,6 +46,17 @@
 			}
 		},
 		{
+			"label": "Build resume",
+			"type": "shell",
+			"command": "go run .",
+			"group": "test",
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			}
+		},
+		{
 			"label": "Run all linting",
 			"problemMatcher": [],
 			"dependsOrder": "sequence",

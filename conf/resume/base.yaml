@@ -333,34 +333,34 @@ employment:
     location: "Beaverton, OR"
     positions:
       - title: "Manager, Software Development Engineering"
-        normalized_title: DevOps Software Engineering Manager
-        flavor: UI Platform
+        normalized_title: Software Engineering Manager
+        flavor: UI Platform; Delivery
         summary: |
-          Manager for DevOps team owning multiple service pipelines as well as
-          AWS/Kubernetes CI infrastructure.
+          Manager for DevOps team owning multiple pipelines as well as AWS/Kubernetes
+          CI infrastructure.
         dates:
           start: Apr. 2021
           end: Present
         bullet_points:
           - |
-            Replaced aging self-managed Kubernetes infrastructure with greenfield
+            Replaced aging self-managed Kubernetes infrastructure with modern AWS
             EKS-based infrastructure.
           - |
-            Engaged with multi-organizational effort to introduce new scalable,
-            centralized CI system for all of Workday.
+            Led multi-organizational effort to introduce new scalable, centralized
+            GitHub Actions CI system for all of Workday.
           - |
-            Implemented on-call rotation to streamline operational responsibilities
-            & respond to after-hours incidents, resulting in greater throughput
-            on development tasks.
+            Implemented on-call rotation & simplified support request system to
+            streamline operational responsibilities & respond to support requests,
+            resulting in reduced toil & more feature throughput.
           - |
             Marshaled multi-team human resources to reduce build times on largest
-            service from 2.5 hours to 1.5 hours.
+            pipeline from 2.5 hours to 1.5 hours.
           - |
-            Shifted deployment responsibilities further left to service development
-            teams by streamlining interfaces and automating many manual tasks.
+            Enabled service owners to independently control their deployments by
+            simplifying interfaces and automating many deployment checks.
           - |
-            Improved and strengthened organizational culture and morale while participating
-            in cultural working group.
+            Participated in and led many cross-functional working groups to improve
+            culture, releases, deployments, and more in UI Platform.
         tags:
           - software_engineering
           - leadership
@@ -380,7 +380,7 @@ employment:
         flavor: Artist Promotional Tools
         summary: |
           Manager for promotional tools to help independent musical artists grow
-          their fanbase and reach.
+          their reach and fanbase.
         dates:
           start: Sep. 2016
           end: Mar. 2021
@@ -391,11 +391,11 @@ employment:
             and deployment, and code quality metrics.
           - |
             Modernized applications and products by introducing containerization,
-            hybrid cloud computing via AWS, and modern infrastructure and provisioning
+            hybrid cloud computing via AWS, and infrastructure and provisioning
             tools such as Terraform and Ansible.
           - |
             Increased subscriber base and profitability of our primary promotional
-            tool by focusing on business feature pipelines and improving on-time
+            tool by prioritizing business feature pipelines and improving on-time
             delivery of projects.
           - |
             Reduced operating costs by 30% by aggressively consolidating services,
