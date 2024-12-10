@@ -92,6 +92,7 @@ func pdfGlobal(c *Configuration) *gofpdf.Fpdf {
 
 		pdf.SetY(-15)
 
+		resumeUrl := "https://github.com/rfpludwick/resume"
 		footer := fmt.Sprintf("%s_%s_p%d",
 			c.Controls.Flavor.Footer,
 			time.Now().Format("2006-01-02-15-04-05-0700"),
@@ -106,11 +107,13 @@ func pdfGlobal(c *Configuration) *gofpdf.Fpdf {
 		hash := base64.URLEncoding.EncodeToString(hasher.Sum(nil))
 
 		hashWidth := pdf.GetStringWidth(hash)
-		footerWidth := pdf.GetStringWidth(hash)
+		resumeUrlWidth := pdf.GetStringWidth(resumeUrl)
+		footerWidth := pdf.GetStringWidth(footer)
 
-		pad := (WorkingPageWidth - hashWidth - footerWidth)
+		pad := ((WorkingPageWidth - hashWidth - resumeUrlWidth - footerWidth) / 2)
 
 		pdf.Cell(hashWidth, 8, hash)
+		pdf.CellFormat((resumeUrlWidth + pad), 8, resumeUrl, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignRight, false, 0, resumeUrl)
 		pdf.CellFormat((footerWidth + pad), 8, footer, gofpdf.BorderNone, gofpdf.LineBreakNone, gofpdf.AlignRight, false, 0, "")
 	})
 
