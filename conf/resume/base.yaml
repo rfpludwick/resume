@@ -4,6 +4,7 @@ contact:
   name: Robert F.P. Ludwick
   pronouns: he/him
   url: "https://ludwick.us/"
+  repository: "https://github.com/rfpludwick/resume"
   location: "Portland Metropolitan Area, OR"
 skills:
   - name: Process Management
@@ -78,7 +79,7 @@ skills:
   - name: DevOps
     tags:
       - technical
-  - name: Docker
+  - name: Containers
     tags:
       - technical
   - name: Kubernetes
@@ -94,6 +95,9 @@ skills:
     tags:
       - technical
   - name: Golang
+    tags:
+      - technical
+  - name: APIs
     tags:
       - technical
   - name: System Architecture
@@ -343,24 +347,25 @@ employment:
           end: Present
         bullet_points:
           - |
-            Replaced aging self-managed Kubernetes infrastructure with modern AWS
-            EKS-based infrastructure.
+            Leading a team of up to 8 responsible for 300+ CI pipelines and CI architecture
+            (AWS, Kubernetes, & GitHub Actions)
           - |
-            Led multi-organizational effort to introduce new scalable, centralized
-            GitHub Actions CI system for all of Workday.
+            Provide DevOps services & pipelines to the entire UIP organization;
+            up to 300 individuals
+          - |
+            Promote development of people leadership via UIP's People Working Group
+            with sessions focused on leadership, process management, solving organizational
+            problems, and more
+          - |
+            Improved development, release, & deployment processes across all of
+            UIP, seeing all DORA metrics improve
           - |
             Implemented on-call rotation & simplified support request system to
             streamline operational responsibilities & respond to support requests,
             resulting in reduced toil & more feature throughput.
           - |
-            Marshaled multi-team human resources to reduce build times on largest
-            pipeline from 2.5 hours to 1.5 hours.
-          - |
-            Enabled service owners to independently control their deployments by
-            simplifying interfaces and automating many deployment checks.
-          - |
-            Participated in and led many cross-functional working groups to improve
-            culture, releases, deployments, and more in UI Platform.
+            As of March 2025, currently replacing legacy CI architecture & applications
+            with modern Kubernetes architecture & GitHub Actions
         tags:
           - software_engineering
           - leadership
@@ -386,29 +391,27 @@ employment:
           end: Mar. 2021
         bullet_points:
           - |
-            Improved reliability of applications and team velocity through standardized
-            implementation of code reviews, automated testing, continuous integration
-            and deployment, and code quality metrics.
+            Led a software engineering team of up to 7; responsible for developing
+            new products and features designed to help musical artists promote their
+            works and reach audiences
           - |
-            Modernized applications and products by introducing containerization,
-            hybrid cloud computing via AWS, and infrastructure and provisioning
-            tools such as Terraform and Ansible.
+            Member of the CD Baby management team; participated in wide-ranging
+            discussions and decisions affecting the whole company
           - |
-            Increased subscriber base and profitability of our primary promotional
-            tool by prioritizing business feature pipelines and improving on-time
-            delivery of projects.
+            Led efforts to modernize our development processes, tools, technologies,
+            and infrastructure - adopted cloud computing adoption via AWS and DevOps
+            practices such as CI/CD pipelines, automation, & more
+          - |
+            Integrated team into, and aligned team with, the rest of CD Baby after
+            a long stretch running independently
+          - |
+            Coordinated resources across the company and multiple external vendors
+            in transferring responsibility of HostBaby product to Bandzoogle
           - |
             Reduced operating costs by 30% by aggressively consolidating services,
             decommissioning multiple self-hosted solutions in favor of managed
             solutions, and rearchitecting applications in cloud-native design
             patterns.
-          - |
-            Improved team process workflows by introducing redundancies where individual
-            bottlenecks existed and by focusing areas of responsibility where they
-            were previously too broad.
-          - |
-            Created and drove technology roadmap to marry long-term technical strategy
-            with business projects and needs.
         tags:
           - software_engineering
           - leadership

@@ -110,6 +110,7 @@ type ConfigurationContact struct {
 	EmailAddress string `yaml:"email_address"`
 	PhoneNumber  string `yaml:"phone_number"`
 	Url          string `yaml:"url"`
+	Repository   string `yaml:"repository"`
 	Location     string `yaml:"location"`
 }
 
