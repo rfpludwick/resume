@@ -22,12 +22,12 @@ flavor:
   footer: "RFPL-Resume"
 skills:
   first:
-    title: Management & Leadership Skills
+    title: "Management & Leadership Skills"
     count: 10
     tags:
       - non_technical
   second:
-    title: Technical Skills & Background
+    title: "Technical Skills & Background"
     count: 11
     tags:
       - technical
