@@ -43,7 +43,7 @@ employers:
     bullet_points:
       start: 6
       decrement: 1
-    collapse_multiple_positions: collapse
+    collapse_multiple_positions: "titles-only"
     tags:
       - mainline
   condensed:

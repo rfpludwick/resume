@@ -442,6 +442,10 @@ organizations_loop:
 
 					// Possible line 3: position summary
 					if position.Summary != "" {
+						if maxPositionIndex > 0 {
+							pdf.Ln(8)
+						}
+
 						fontSize = float64(11)
 
 						pdf.SetFont(DefaultFont, FontStyleNormal, fontSize)
