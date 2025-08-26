@@ -338,7 +338,7 @@ employment:
     positions:
       - title: "Manager, Software Development Engineering"
         normalized_title: Software Engineering Manager
-        flavor: UI Platform; Delivery
+        flavor: IXP; Delivery
         summary: |
           Manager for DevOps team owning multiple pipelines as well as AWS/Kubernetes
           CI infrastructure.
