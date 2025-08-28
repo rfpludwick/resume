@@ -350,7 +350,7 @@ employment:
             Leading a team of up to 8 responsible for 300+ CI pipelines and CI architecture
             (AWS, Kubernetes, & GitHub Actions)
           - |
-            Provide DevOps services & pipelines to the entire UIP organization;
+            Provide DevOps services & pipelines to the entire IXP organization;
             up to 300 individuals
           - |
             Promote development of people leadership via UIP's People Working Group
@@ -358,14 +358,13 @@ employment:
             problems, and more
           - |
             Improved development, release, & deployment processes across all of
-            UIP, seeing all DORA metrics improve
+            IXP, seeing all DORA metrics improve
           - |
-            Implemented on-call rotation & simplified support request system to
-            streamline operational responsibilities & respond to support requests,
-            resulting in reduced toil & more feature throughput.
-          - |
-            As of March 2025, currently replacing legacy CI architecture & applications
+            As of August 2025, currently replacing legacy CI architecture & applications
             with modern Kubernetes architecture & GitHub Actions
+          - |
+            Operated as interim/temporary department Director during multiple sabbaticals
+            in Delivery department leadership staff.
         tags:
           - software_engineering
           - leadership
