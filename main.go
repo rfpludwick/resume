@@ -26,7 +26,9 @@ var (
 )
 
 func init() {
-	os.Setenv("TZ", "UTC")
+	if err := os.Setenv("TZ", "UTC"); err != nil {
+		log.Fatal("Error setting environment variable:", err)
+	}
 
 	initFlags()
 }
@@ -995,5 +997,7 @@ func writePdf(pdf *gofpdf.Fpdf, c *Configuration) {
 		outputFilename = c.Controls.Pdf.Filename
 	}
 
-	pdf.OutputFileAndClose(outputFilename)
+	if err := pdf.OutputFileAndClose(outputFilename); err != nil {
+		log.Fatal("Error generating PDF:", err)
+	}
 }
