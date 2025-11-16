@@ -37,6 +37,9 @@ skills:
   - name: Scrum Agile SDLC
     tags:
       - non_technical
+  - name: AI Tools Utilization
+    tags:
+      - non_technical
   - name: Leadership
     tags:
       - non_technical
@@ -347,24 +350,24 @@ employment:
           end: Present
         bullet_points:
           - |
-            Leading a team of up to 8 responsible for 300+ CI pipelines and CI architecture
-            (AWS, Kubernetes, & GitHub Actions)
+            Leading a team of up to 8 responsible for 300+ CI pipelines and architecture
+            (AWS, Kubernetes, & GitHub Actions).
           - |
             Provide DevOps services & pipelines to the entire IXP organization;
-            up to 300 individuals
+            up to 450 individuals.
           - |
-            Promote development of people leadership via UIP's People Working Group
+            Promote development of people leadership via IXP's People Working Group
             with sessions focused on leadership, process management, solving organizational
-            problems, and more
+            problems, & more.
           - |
             Improved development, release, & deployment processes across all of
-            IXP, seeing all DORA metrics improve
+            IXP, improving DORA metrics for all IXP services.
           - |
-            As of August 2025, currently replacing legacy CI architecture & applications
-            with modern Kubernetes architecture & GitHub Actions
+            Recently replaced legacy CI architecture (non-managed) & applications
+            (Jenkins, Bamboo) with modern Kubernetes architecture & GitHub Actions.
           - |
-            Operated as interim/temporary department Director during multiple sabbaticals
-            in Delivery department leadership staff
+            Operated as interim department Director during multiple sabbaticals
+            affecting Delivery department leadership staff.
         tags:
           - software_engineering
           - leadership
@@ -392,20 +395,20 @@ employment:
           - |
             Led a software engineering team of up to 7; responsible for developing
             new products and features designed to help musical artists promote their
-            works and reach audiences
+            works and reach audiences.
           - |
             Member of the CD Baby management team; participated in wide-ranging
-            discussions and decisions affecting the whole company
+            discussions and decisions affecting the entire company.
           - |
             Led efforts to modernize our development processes, tools, technologies,
-            and infrastructure - adopted cloud computing adoption via AWS and DevOps
-            practices such as CI/CD pipelines, automation, & more
+            and infrastructure - adopted cloud computing via AWS and DevOps practices
+            such as CI/CD pipelines, automation, & more.
           - |
-            Integrated team into, and aligned team with, the rest of CD Baby after
-            a long stretch running independently
+            Integrated team into, and aligned team with, the rest of the business
+            after a long stretch running independently.
           - |
             Coordinated resources across the company and multiple external vendors
-            in transferring responsibility of HostBaby product to Bandzoogle
+            in transferring operations of of HostBaby product customers to Bandzoogle.
           - |
             Reduced operating costs by 30% by aggressively consolidating services,
             decommissioning multiple self-hosted solutions in favor of managed

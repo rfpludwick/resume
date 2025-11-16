@@ -2,6 +2,7 @@
 	"window.title": "${activeEditorMedium}${dirty}${separator}Resume${separator}${appName}",
 	"cSpell.words": [
 		"Antora",
+		"Bandzoogle",
 		"Clackamas",
 		"Dambert",
 		"Edgewater",
