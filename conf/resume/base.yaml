@@ -519,7 +519,7 @@ employment:
       - individual_contributor
       - mainline
   - organization: DarqFlare Enterprises
-    location: Various
+    location: Remote
     positions:
       - title: Consultant
         summary: |
@@ -926,7 +926,7 @@ education:
 projects:
   - title: "OMGN: Online Movies & Games Network"
     url: "http://omgn.com/"
-    location: Various
+    location: Remote
     role: "Owner, Software Engineer"
     summary: |
       OMGN covered indie multiplayer online video games & films.
