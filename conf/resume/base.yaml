@@ -5,7 +5,7 @@ contact:
   pronouns: he/him
   url: "https://ludwick.us/"
   repository: "https://github.com/rfpludwick/resume"
-  location: "Portland Metropolitan Area, OR"
+  location: "Portland Metropolitan Area, OR, USA"
 skills:
   - name: Process Management
     tags:
@@ -13,16 +13,10 @@ skills:
   - name: Project Management
     tags:
       - non_technical
-  - name: Communication
-    tags:
-      - non_technical
   - name: Mentorship
     tags:
       - non_technical
   - name: Coaching
-    tags:
-      - non_technical
-  - name: OKRs
     tags:
       - non_technical
   - name: Goal Setting
@@ -34,10 +28,19 @@ skills:
   - name: Technical Leadership
     tags:
       - non_technical
+  - name: OKRs
+    tags:
+      - non_technical
   - name: Scrum Agile SDLC
     tags:
       - non_technical
   - name: AI Tools Utilization
+    tags:
+      - non_technical
+  - name: Stakeholder Management
+    tags:
+      - non_technical
+  - name: Communication
     tags:
       - non_technical
   - name: Leadership
@@ -59,6 +62,9 @@ skills:
     tags:
       - non_technical
   - name: Behavioral Interviewing
+    tags:
+      - non_technical
+  - name: Kanban Agile SDLC
     tags:
       - non_technical
   - name: "Diversity, Equity, & Inclusivity (DEI)"
@@ -337,7 +343,7 @@ skills:
 employment:
   - organization: "Workday, Inc."
     url: "https://workday.com/"
-    location: "Beaverton, OR"
+    location: "Beaverton, OR, USA"
     positions:
       - title: "Manager, Software Development Engineering"
         normalized_title: Software Engineering Manager
@@ -380,7 +386,7 @@ employment:
   - organization: "CD Baby, Inc."
     organization_extra: of Downtown Music Holdings
     url: "https://cdbaby.com/"
-    location: "Portland, OR"
+    location: "Portland, OR, USA"
     positions:
       - title: Development Manager
         normalized_title: Software Engineering Manager
@@ -426,7 +432,7 @@ employment:
   - organization: "Playtika Santa Monica, LLC"
     organization_extra: formerly Buffalo Studios
     url: "https://playtika.com/"
-    location: "Santa Monica, CA"
+    location: "Santa Monica, CA, USA"
     positions:
       - title: "Manager, Software Engineering, Tools"
         normalized_title: Software Engineering Manager
@@ -537,7 +543,7 @@ employment:
           - consulting
           - contract
   - organization: "Meteor Games, LLC"
-    location: "Beverly Hills, CA"
+    location: "Beverly Hills, CA, USA"
     positions:
       - title: Lead PHP Game Engineer
         normalized_title: Lead Software Engineer
@@ -584,7 +590,7 @@ employment:
   - organization: "DataX, Ltd."
     organization_extra: formerly of The Selling Source; now of Equifax
     url: "https://dataxltd.com/"
-    location: "Las Vegas, NV"
+    location: "Las Vegas, NV, USA"
     positions:
       - title: PHP Developer II
         normalized_title: Software Engineer
@@ -631,7 +637,7 @@ employment:
       - mainline
   - organization: "Swim2000, Inc."
     url: "https://swim2000.com/"
-    location: "Las Vegas, NV"
+    location: "Las Vegas, NV, USA"
     positions:
       - title: Web Developer
         normalized_title: Software Engineer
@@ -657,7 +663,7 @@ employment:
       - individual_contributor
       - mainline
   - organization: "Dambert Technologies, LLC"
-    location: "Las Vegas, NV"
+    location: "Las Vegas, NV, USA"
     positions:
       - title: "Owner, CEO"
         summary: |
@@ -682,7 +688,7 @@ employment:
   - organization: The Rebel Yell
     organization_extra: "now The Scarlet & Gray Free Press"
     url: "https://unlvscarletandgray.com/"
-    location: "Las Vegas, NV"
+    location: "Las Vegas, NV, USA"
     positions:
       - title: Staff Member
         normalized_title: "Software Engineer, Columnist"
@@ -711,7 +717,7 @@ employment:
       - mainline
   - organization: College of Southern Nevada
     url: "https://csn.edu/"
-    location: "Las Vegas, NV"
+    location: "Las Vegas, NV, USA"
     positions:
       - title: Lab Assistant
         summary: |
@@ -735,7 +741,7 @@ employment:
       - mainline
 volunteering:
   - organization: Edgewater on the Tualatin HOA
-    location: "King City, OR"
+    location: "King City, OR, USA"
     positions:
       - title: ARC Committee Member
         summary: |
@@ -752,7 +758,7 @@ volunteering:
       - architecture
   - organization: Clackamas Traffic Safety Commission
     url: "https://www.clackamas.us/meetings/engineering/tsc"
-    location: "Clackamas County, OR"
+    location: "Clackamas County, OR, USA"
     positions:
       - title: Commissioner
         summary: |
@@ -777,7 +783,7 @@ volunteering:
       - leadership
   - organization: Library District of Clackamas County Budget Committee
     url: "https://www.clackamas.us/librarydistrict/budget.html"
-    location: "Clackamas County, OR"
+    location: "Clackamas County, OR, USA"
     positions:
       - title: Committee Member
         summary: |
@@ -791,7 +797,7 @@ volunteering:
     tags:
       - budget
   - organization: Clackamas Traffic Safety Action Plan
-    location: "Clackamas County, OR"
+    location: "Clackamas County, OR, USA"
     positions:
       - title: Advisory Committee Member
         summary: |
@@ -806,7 +812,7 @@ volunteering:
       - safety
   - organization: UNLV Catholic Newman Center
     url: "http://unlvnewman.com/"
-    location: "Las Vegas, NV"
+    location: "Las Vegas, NV, USA"
     positions:
       - title: "Webmaster & Sound Engineer"
         summary: |
@@ -849,7 +855,7 @@ volunteering:
 politics:
   - organization: Democratic Party of Clackamas County
     url: "https://www.clackamasdems.org/"
-    location: "Clackamas County, OR"
+    location: "Clackamas County, OR, USA"
     positions:
       - title: House District Leader
         summary: |
@@ -875,7 +881,7 @@ politics:
       - leadership
   - organization: Democratic Party of Clackamas County
     url: "https://www.clackamasdems.org/"
-    location: "Clackamas County, OR"
+    location: "Clackamas County, OR, USA"
     positions:
       - title: Neighborhood Leader
         summary: |
@@ -895,7 +901,7 @@ politics:
       - leadership
   - organization: Democratic Party of Clackamas County
     url: "https://www.clackamasdems.org/"
-    location: "Clackamas County, OR"
+    location: "Clackamas County, OR, USA"
     positions:
       - title: Precinct Committee Person
         summary: |

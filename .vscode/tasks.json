@@ -48,7 +48,7 @@
 		{
 			"label": "Build resume",
 			"type": "shell",
-			"command": "go run .",
+			"command": "scripts/build.sh",
 			"group": "test",
 			"problemMatcher": [],
 			"presentation": {
