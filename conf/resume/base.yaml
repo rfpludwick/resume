@@ -34,7 +34,7 @@ skills:
   - name: Scrum Agile SDLC
     tags:
       - non_technical
-  - name: AI Tools Utilization
+  - name: LLM-Enhanced Workflows
     tags:
       - non_technical
   - name: Stakeholder Management
@@ -107,6 +107,9 @@ skills:
     tags:
       - technical
   - name: APIs
+    tags:
+      - technical
+  - name: Claude
     tags:
       - technical
   - name: System Architecture
@@ -356,24 +359,28 @@ employment:
           end: Present
         bullet_points:
           - |
-            Leading a team of up to 8 responsible for 300+ CI pipelines and architecture
-            (AWS, Kubernetes, & GitHub Actions).
+            Leading a team of 7 responsible for 400+ CI pipelines and architecture
+            (AWS, Kubernetes, & GitHub Actions). Provide DevOps services & pipelines
+            to the entire IXP organization; up to 450 individuals.
           - |
-            Provide DevOps services & pipelines to the entire IXP organization;
-            up to 450 individuals.
-          - |
-            Promote development of people leadership via IXP's People Working Group
+            Promote & facilitate development of people leadership via IXP's People Working Group
             with sessions focused on leadership, process management, solving organizational
             problems, & more.
           - |
             Improved development, release, & deployment processes across all of
-            IXP, improving DORA metrics for all IXP services.
+            IXP, improving DORA metrics for all IXP services & assets.
           - |
-            Recently replaced legacy CI architecture (non-managed) & applications
-            (Jenkins, Bamboo) with modern Kubernetes architecture & GitHub Actions.
+            Led replacement of legacy CI architecture (non-managed) & applications
+            (Jenkins, Bamboo) with modern Kubernetes architecture & GitHub Actions
+            across 400+ pipelines.
           - |
             Operated as interim department Director during multiple sabbaticals
-            affecting Delivery department leadership staff.
+            affecting Delivery department leadership staff. Managed two teams directly
+            during this time.
+          - |
+            Drove adoption of multiple LLM-enhanced agentic engineering & management
+            practices across IXP in a variety of processes, such as pipelines, talent
+            evaluation, & more.
         tags:
           - software_engineering
           - leadership
@@ -403,9 +410,6 @@ employment:
             new products and features designed to help musical artists promote their
             works and reach audiences.
           - |
-            Member of the CD Baby management team; participated in wide-ranging
-            discussions and decisions affecting the entire company.
-          - |
             Led efforts to modernize our development processes, tools, technologies,
             and infrastructure - adopted cloud computing via AWS and DevOps practices
             such as CI/CD pipelines, automation, & more.
@@ -416,10 +420,9 @@ employment:
             Coordinated resources across the company and multiple external vendors
             in transferring operations of of HostBaby product customers to Bandzoogle.
           - |
-            Reduced operating costs by 30% by aggressively consolidating services,
-            decommissioning multiple self-hosted solutions in favor of managed
-            solutions, and rearchitecting applications in cloud-native design
-            patterns.
+            Reduced operating costs by 30% by consolidating services, decommissioning
+            multiple self-hosted solutions in favor of managed solutions, and rearchitecting
+            applications in cloud-native design patterns.
         tags:
           - software_engineering
           - leadership
