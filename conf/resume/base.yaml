@@ -34,7 +34,7 @@ skills:
   - name: Scrum Agile SDLC
     tags:
       - non_technical
-  - name: "LLM-Enhanced Workflows"
+  - name: Generative AI Usage
     tags:
       - non_technical
   - name: Stakeholder Management
@@ -367,20 +367,20 @@ employment:
             with sessions focused on leadership, process management, solving organizational
             problems, & more.
           - |
-            Improved development, release, & deployment processes across all of
-            IXP, improving DORA metrics for all IXP services & assets.
-          - |
-            Led replacement of legacy CI architecture (non-managed) & applications
-            (Jenkins, Bamboo) with modern Kubernetes architecture & GitHub Actions
-            across 400+ pipelines.
-          - |
             Operated as interim department Director during multiple sabbaticals
             affecting Delivery department leadership staff. Managed two teams directly
             during this time.
           - |
             Drove adoption of multiple LLM-enhanced agentic engineering & management
             practices across IXP in a variety of processes, such as pipelines, talent
-            evaluation, & more.
+            evaluation, & more; using Claude, Cursor, Gemini, and others.
+          - |
+            Improved development, release, & deployment processes across all of
+            IXP, improving DORA metrics for all IXP services & assets.
+          - |
+            Led replacement of legacy CI architecture (non-managed) & applications
+            (Jenkins, Bamboo) with modern Kubernetes architecture & GitHub Actions
+            across 400+ pipelines.
         tags:
           - software_engineering
           - leadership
