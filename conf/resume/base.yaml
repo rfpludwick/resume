@@ -431,7 +431,7 @@ employment:
     positions:
       - title: "Manager, Software Development Engineering"
         normalized_title: Software Engineering Manager
-        flavor: Software Delivery & DevOps
+        flavor: "Software Delivery & DevOps"
         summary: |
           Manager for DevOps team owning multiple pipelines as well as Kubernetes
           + GHA CI platform.
