@@ -1,6 +1,19 @@
+# Generated PDFs
 *.pdf
+
+# Local
+.claude/
 .devcontainer/*-local.sh
+
+# Machine-specific files
 .DS_Store
+
+# Executables
 bin/
-conf/resume/secret.yaml
 ./resume
+
+# Secrets
+conf/resume/secret.yaml
+
+# Career resources
+resources/*

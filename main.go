@@ -499,6 +499,8 @@ organizations_loop:
 
 									bulletPointParts = bulletPointParts[sliceRight:]
 									bulletPointsCollected = []string{}
+
+									break
 								}
 							}
 

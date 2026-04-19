@@ -7,112 +7,190 @@ contact:
   repository: "https://github.com/rfpludwick/resume"
   location: "Portland Metropolitan Area, OR, USA"
 skills:
-  - name: Process Management
+  - name: Strategic Planning
     tags:
-      - non_technical
-  - name: Project Management
+      - core
+  - name: "Cross-Functional Team Leadership"
     tags:
-      - non_technical
-  - name: Mentorship
-    tags:
-      - non_technical
-  - name: Coaching
-    tags:
-      - non_technical
-  - name: Goal Setting
-    tags:
-      - non_technical
-  - name: Performance Improvement
-    tags:
-      - non_technical
-  - name: Technical Leadership
-    tags:
-      - non_technical
-  - name: OKRs
-    tags:
-      - non_technical
-  - name: Scrum Agile SDLC
-    tags:
-      - non_technical
-  - name: Generative AI Usage
-    tags:
-      - non_technical
+      - core
   - name: Stakeholder Management
     tags:
-      - non_technical
-  - name: Communication
+      - core
+  - name: Talent Development
     tags:
-      - non_technical
-  - name: Leadership
+      - core
+  - name: Change Management
     tags:
-      - non_technical
-  - name: Team Building
+      - core
+  - name: Operational Excellence
     tags:
-      - non_technical
-  - name: People Management
+      - core
+  - name: Engineering Strategy
     tags:
-      - non_technical
-  - name: Constructive Feedback
+      - core
+  - name: Technology Roadmapping
     tags:
-      - non_technical
-  - name: Team Management
+      - core
+  - name: "Coaching & Mentoring"
     tags:
-      - non_technical
-  - name: Employee Training
+      - core
+  - name: Psychological Safety
     tags:
-      - non_technical
+      - core
+  - name: Culture Development
+    tags:
+      - core
+  - name: Headcount Management
+    tags:
+      - core
+  - name: OKR Management
+    tags:
+      - core
+  - name: Decision Making
+    tags:
+      - core
   - name: Behavioral Interviewing
     tags:
-      - non_technical
-  - name: Kanban Agile SDLC
+      - core
+  - name: Engineering Analysis
     tags:
-      - non_technical
+      - core
+  - name: Technical Project Delivery
+    tags:
+      - core
+  - name: Capacity Planning
+    tags:
+      - core
+  - name: Budget Management
+    tags:
+      - core
+  - name: Cost Control
+    tags:
+      - core
+  - name: Vendor Management
+    tags:
+      - core
+  - name: DORA Metrics
+    tags:
+      - core
+  - name: Agile Methodologies
+    tags:
+      - core
+  - name: Team Leadership
+    tags:
+      - core
+  - name: Project Management
+    tags:
+      - core
+  - name: Organizational Design
+    tags:
+      - core
+  - name: Incident Management
+    tags:
+      - core
+  - name: Process Management
+    tags:
+      - core
+  - name: Goal Setting
+    tags:
+      - core
+  - name: Performance Improvement
+    tags:
+      - core
+  - name: Communication
+    tags:
+      - core
+  - name: Constructive Feedback
+    tags:
+      - core
+  - name: Adaptability
+    tags:
+      - core
+  - name: Accountability
+    tags:
+      - core
+  - name: Inclusivity
+    tags:
+      - core
+  - name: Trust Building
+    tags:
+      - core
+  - name: Execution
+    tags:
+      - core
+  - name: Employee Training
+    tags:
+      - core
   - name: "Diversity, Equity, & Inclusivity (DEI)"
     tags:
-      - non_technical
-  - name: Organizing Meetings
-    tags:
-      - non_technical
+      - core
   - name: Journalism
     tags:
-      - non_technical
-  - name: Software Engineering
-    tags:
-      - technical
-  - name: Amazon Web Services (AWS)
-    tags:
-      - technical
-  - name: "Continuous Integration & Deployment (CI/CD)"
+      - core
+  - name: Platform Engineering
     tags:
       - technical
   - name: DevOps
     tags:
       - technical
-  - name: Containers
+  - name: GitHub Actions
     tags:
       - technical
   - name: Kubernetes
     tags:
       - technical
+  - name: Amazon Web Services (AWS)
+    tags:
+      - technical
   - name: Infrastructure as Code (IaC)
+    tags:
+      - technical
+  - name: Release Engineering
+    tags:
+      - technical
+  - name: Agentic Automation
+    tags:
+      - technical
+  - name: DevSecOps
+    tags:
+      - technical
+  - name: Developer Experience
+    tags:
+      - technical
+  - name: Software Observability
+    tags:
+      - technical
+  - name: System Architecture
+    tags:
+      - technical
+  - name: Distributed Systems
     tags:
       - technical
   - name: Terraform
     tags:
       - technical
-  - name: Helm
+  - name: Golang
     tags:
       - technical
-  - name: Golang
+  - name: Software Engineering
+    tags:
+      - technical
+  - name: Generative AI Usage
+    tags:
+      - technical
+  - name: "Continuous Integration & Deployment (CI/CD)"
+    tags:
+      - technical
+  - name: Containers
+    tags:
+      - technical
+  - name: Helm
     tags:
       - technical
   - name: APIs
     tags:
       - technical
   - name: Claude
-    tags:
-      - technical
-  - name: System Architecture
     tags:
       - technical
   - name: Web Development
@@ -158,6 +236,12 @@ skills:
     tags:
       - technical
   - name: Concourse CI
+    tags:
+      - technical
+  - name: "Full-Stack Development"
+    tags:
+      - technical
+  - name: Database Administration
     tags:
       - technical
   - name: Buildkite
@@ -212,9 +296,6 @@ skills:
     tags:
       - technical
   - name: RabbitMQ
-    tags:
-      - technical
-  - name: Distributed Systems
     tags:
       - technical
   - name: eXtensible Markup Language (XML)
@@ -350,37 +431,55 @@ employment:
     positions:
       - title: "Manager, Software Development Engineering"
         normalized_title: Software Engineering Manager
-        flavor: IXP; Delivery
+        flavor: Software Delivery & DevOps
         summary: |
-          Manager for DevOps team owning multiple pipelines as well as AWS/Kubernetes
-          CI infrastructure.
+          Manager for DevOps team owning multiple pipelines as well as Kubernetes
+          + GHA CI platform.
         dates:
           start: Apr. 2021
           end: Present
         bullet_points:
           - |
-            Leading a team of 7 responsible for 400+ CI pipelines and architecture
-            (AWS, Kubernetes, & GitHub Actions). Provide DevOps services & pipelines
-            to the entire IXP organization; up to 450 individuals.
+            Served as interim department Director during 3 concurrent leadership
+            absences, managing 2 teams and 12 total headcount directly (15 more
+            indirectly); fielded strategic requests from senior leadership, maintained
+            department-wide OKRs, and kept cross-org operations running without
+            disruption.
           - |
-            Promote & facilitate development of people leadership via IXP's People Working Group
-            with sessions focused on leadership, process management, solving organizational
-            problems, & more.
+            Led 4-year CI platform modernization: retired Jenkins & Bamboo, migrated
+            400+ pipelines across 75%+ of IXP to GitHub Actions on Kubernetes -
+            eliminating a major technology risk surface, reducing CI complexity,
+            & improving build times by up to 95% (77 min to 4 min).
           - |
-            Operated as interim department Director during multiple sabbaticals
-            affecting Delivery department leadership staff. Managed two teams directly
-            during this time.
+            Accountable for DevOps CI platform serving 450+ engineers: 7 direct
+            reports, ~$2M annual CI budget, 400+ pipelines maintained.
           - |
-            Drove adoption of multiple LLM-enhanced agentic engineering & management
-            practices across IXP in a variety of processes, such as pipelines, talent
-            evaluation, & more; using Claude, Cursor, Gemini, and others.
+            Pioneered AI adoption across IXP: rolled out AI code review, deployed
+            Claude-powered team management workflows, facilitated AI sessions for
+            a People Leadership Forum, and planned the department's first agentic
+            AI hackathon.
           - |
-            Improved development, release, & deployment processes across all of
-            IXP, improving DORA metrics for all IXP services & assets.
+            Mentored 3 early-career associated engineering managers in IXP; two
+            resulted in promotions to full engineering manager roles.
           - |
-            Led replacement of legacy CI architecture (non-managed) & applications
-            (Jenkins, Bamboo) with modern Kubernetes architecture & GitHub Actions
-            across 400+ pipelines.
+            Facilitated IXP's People Leadership Forum, delivering leadership development
+            programming on team-building, process management, and organizational
+            problem-solving for managers across the org.
+          - |
+            Chartered cross-org working groups (Phalanx, Deployments, Delivery Culture)
+            that standardized release cutoffs, increased Tuesday merge volume by
+            40%, and drove process consolidation across the org.
+          - |
+            Owned security and compliance posture for CI platform: implemented mandatory
+            SonarQube, Snyk, and Xray PR quality gates; shepherded FedRAMP/IL4 support,
+            FIPS 140-3, SLSA adherence, and AWS IAM governance initiatives.
+          - |
+            Built and sustained a high-performing team across multiple organizational
+            restructurings; established career growth programs for individual contributors.
+          - |
+            Designed and drove adoption of a train-based release and deployment
+            model across org; drove standardized cutoff times that increased merge
+            confidence and reduced deployment-day risk organization-wide.
         tags:
           - software_engineering
           - leadership
@@ -406,23 +505,43 @@ employment:
           end: Mar. 2021
         bullet_points:
           - |
-            Led a software engineering team of up to 7; responsible for developing
-            new products and features designed to help musical artists promote their
-            works and reach audiences.
+            Led full cloud transformation for LAMP engineering division: migrated
+            from self-hosted infrastructure to AWS, implementing CI/CD pipelines,
+            cloud-native architecture patterns, and modern DevOps practices across
+            the team.
           - |
-            Led efforts to modernize our development processes, tools, technologies,
-            and infrastructure - adopted cloud computing via AWS and DevOps practices
-            such as CI/CD pipelines, automation, & more.
+            Reduced operating costs by 30% through service consolidation, decommissioning
+            legacy self-hosted systems in favor of managed cloud services, and rearchitecting
+            applications using cloud-native design patterns.
           - |
-            Integrated team into, and aligned team with, the rest of the business
-            after a long stretch running independently.
+            Managed engineering team of up to 7, delivering artist-facing promotional
+            products; drove new product development and feature roadmap serving
+            independent musicians globally.
           - |
-            Coordinated resources across the company and multiple external vendors
-            in transferring operations of of HostBaby product customers to Bandzoogle.
+            Coordinated multi-vendor, cross-company transfer of HostBaby's customers
+            to Bandzoogle, managing external vendor relationships, migration planning,
+            and customer continuity across organizations.
           - |
-            Reduced operating costs by 30% by consolidating services, decommissioning
-            multiple self-hosted solutions in favor of managed solutions, and rearchitecting
-            applications in cloud-native design patterns.
+            Integrated a previously independent engineering team into the broader
+            Downtown Music Holdings engineering organization, aligning processes,
+            tooling, and culture with company-wide standards.
+          - |
+            Drove DevOps maturity from zero: established automated deployments,
+            infrastructure as code, and CI/CD pipeline practices where none previously existed.
+          - |
+            Owned full software delivery lifecycle for B2C promotional tools used
+            by hundreds of thousands of independent artists, balancing feature velocity
+            with operational stability.
+          - |
+            Managed vendor relationships and evaluated tooling decisions across
+            infrastructure, development tooling, and operational services.
+          - |
+            Defined hiring practices, onboarding processes, and engineering standards
+            for a growing team in a distributed, remote-tolerant environment.
+          - |
+            Navigated team through acquisition and organizational change under Downtown
+            Music Holdings, maintaining team cohesion, product delivery, and morale
+            during uncertainty.
         tags:
           - software_engineering
           - leadership
@@ -439,7 +558,7 @@ employment:
     positions:
       - title: "Manager, Software Engineering, Tools"
         normalized_title: Software Engineering Manager
-        flavor: Tools
+        flavor: "Back-Office Tools"
         summary: |
           Manager for back-office, internal tools to streamline content management
           and marketing functions.
@@ -448,32 +567,53 @@ employment:
           end: Aug. 2016
         bullet_points:
           - |
-            Improved mobile push notification services' throughput by 150x by
-            implementing distributed computing - scaling multiple services both
-            horizontally and vertically.
+            Improved mobile push notification throughput by 150x by implementing
+            distributed computing architecture, scaling services horizontally and
+            vertically to support millions of concurrent push notifications.
           - |
-            Streamlined product and marketing teams' workflows in managing content
-            for mobile games by improving user interfaces, consolidating multiple
-            steps, and moving some functions to advanced editors for power users.
+            Saved 20 person-hours weekly for the marketing department by developing
+            a custom audience and pixel management platform with integrations into
+            Facebook and other marketing channels.
           - |
-            Improved general back office tools frontend and backend performance
-            by replacing legacy monolith application with a modern, robust backend
-            REST API coupled with an AngularJS 1.2.x frontend.
+            Promoted from Senior Software Engineer, to Lead Software Engineer, then
+            Engineering Manager; built and led a tools engineering team responsible
+            for back-office systems supporting content management and marketing
+            operations for a top mobile video gaming studio.
           - |
-            Saved 20 person-hours, weekly, of marketing team's time by developing
-            custom audience and pixel management solutions in-house to integrate
-            with Facebook and other marketing platforms.
+            Successfully integrated a distributed remote team in Minsk, Belarus
+            with the Santa Monica team, establishing cross-timezone sprint cadences,
+            shared milestones, and collaborative development practices.
           - |
-            Successfully integrated remote team in Minsk, Belarus with team in
-            Santa Monica, including sprint cadences, milestones, and cross-timezone
-            collaborative work.
+            Replaced a legacy monolith back-office application with a modern REST
+            API backend coupled with an AngularJS SPA, improving performance, developer
+            velocity, and long-term maintainability.
+          - |
+            Streamlined product and marketing team workflows through improved UIs,
+            process consolidation, and advanced editor tooling - reducing manual
+            steps and increasing marketing execution speed.
+          - |
+            Built a back-office toolset from scratch to integrate with custom mobile
+            game libraries and frameworks, providing the foundational content management
+            infrastructure for game operations.
+          - |
+            Managed engineering team through the Buffalo Studios to Playtika acquisition
+            (via Ceasars Interactive Entertainment), maintaining delivery continuity
+            and team stability during a high-disruption corporate transition.
+          - |
+            Established engineering hiring processes, team rituals, and development
+            standards for a greenfield tools engineering function in a high-growth
+            mobile gaming company.
+          - |
+            Owned end-to-end delivery of internal tools that directly enabled marketing
+            and product teams' ability to operate at scale across multiple live
+            mobile game titles.
         tags:
           - software_engineering
           - leadership
           - management
       - title: "Lead Software Engineer, Tools"
         normalized_title: Lead Software Engineer
-        flavor: Tools
+        flavor: "Back-Office Tools"
         summary: |
           Lead engineer for back-office, internal tools to streamline content management
           and marketing functions.
@@ -499,7 +639,7 @@ employment:
           - individual_contributor
       - title: "Senior Software Engineer, Tools"
         normalized_title: Senior Software Engineer
-        flavor: Tools
+        flavor: "Back-Office Tools"
         summary: |
           Senior engineer for back-office, internal tools to streamline content
           management and marketing functions.
@@ -724,7 +864,7 @@ employment:
     positions:
       - title: Lab Assistant
         summary: |
-          Computer ab assistant for many campus locations to assist college students
+          Computer lab assistant for many campus locations to assist college students
           with lab floor technology.
         dates:
           start: Aug. 2001
@@ -952,7 +1092,7 @@ projects:
         Wrote regular news articles and video game/movie reviews.
       - |
         Handed off IP and content of OMGN in February 2015; anything after that
-        date is no loner under my control.
+        date is no longer under my control.
     tags:
       - video_games
       - movies
@@ -987,16 +1127,6 @@ certifications:
     tags:
       - project_management
       - mainline
-  - certification: Zend Certified PHP 5 Engineer; ZCE
-    url: "http://www.zend.com/en/yellow-pages/ZEND007578"
-    authority: Zend Technologies
-    credential: ZEND007578
-    dates:
-      start: 2012
-      end: Present
-    tags:
-      - technical
-      - mainline
   - certification: Fair Credit Reporting Act; FCRA
     authority: Consumer Data Industry Association
     dates:
@@ -1005,3 +1135,13 @@ certifications:
     tags:
       - financial
       - compliance
+  - certification: Zend Certified PHP 5 Engineer; ZCE
+    url: "http://www.zend.com/en/yellow-pages/ZEND007578"
+    authority: Zend Technologies
+    credential: ZEND007578
+    dates:
+      start: 2008
+      end: 2011
+    tags:
+      - technical
+      - mainline

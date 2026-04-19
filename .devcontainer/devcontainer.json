@@ -11,7 +11,8 @@
 		"davidanson.vscode-markdownlint",
 		"redhat.vscode-yaml",
 		"mrmlnc.vscode-json5",
-		"tomoki1207.pdf"
+		"tomoki1207.pdf",
+		"anthropic.claude-code"
 	],
 	"remoteEnv": {
 		"VAULT_ADDR": "${localEnv:VAULT_ADDR}",

@@ -15,3 +15,10 @@ my own.
 
 As of right now, this generator does **not** work with the resume JSON Spec. That
 may be a future feature addition.
+
+## Configurations
+
+- All of my history is in the `/conf/` directory.
+- The `/controls/` subdirectory controls the generation of the resume with configurable
+   options.
+- The `/resume/` subdirectory contains all of my career.
