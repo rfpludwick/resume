@@ -447,22 +447,22 @@ employment:
             disruption.
           - |
             Led 4-year CI platform modernization: retired Jenkins & Bamboo, migrated
-            400+ pipelines across 75%+ of IXP to GitHub Actions on Kubernetes -
+            400+ pipelines across 75%+ of org to GitHub Actions on Kubernetes -
             eliminating a major technology risk surface, reducing CI complexity,
             & improving build times by up to 95% (77 min to 4 min).
           - |
             Accountable for DevOps CI platform serving 450+ engineers: 7 direct
             reports, ~$2M annual CI budget, 400+ pipelines maintained.
           - |
-            Pioneered AI adoption across IXP: rolled out AI code review, deployed
+            Pioneered AI adoption across org: rolled out AI code review, deployed
             Claude-powered team management workflows, facilitated AI sessions for
             a People Leadership Forum, and planned the department's first agentic
             AI hackathon.
           - |
-            Mentored 3 early-career associated engineering managers in IXP; two
+            Mentored 3 early-career associated engineering managers in org; two
             resulted in promotions to full engineering manager roles.
           - |
-            Facilitated IXP's People Leadership Forum, delivering leadership development
+            Facilitated org's People Leadership Forum, delivering leadership development
             programming on team-building, process management, and organizational
             problem-solving for managers across the org.
           - |
