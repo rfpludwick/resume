@@ -451,20 +451,22 @@ employment:
             eliminating a major technology risk surface, reducing CI complexity,
             & improving build times by up to 95% (77 min to 4 min).
           - |
-            Accountable for DevOps CI platform serving 450+ engineers: 7 direct
-            reports, ~$2M annual CI budget, 400+ pipelines maintained.
+            Accountable for 2 end user facing services: 8.3B monthly transactions,
+            serving entire Workday customer base & their end users.
+          - |
+            Accountable for DevOps CI platform serving 450+ engineers: ~$2M annual
+            CI budget, 400+ pipelines maintained.
           - |
             Pioneered AI adoption across org: rolled out AI code review, deployed
-            Claude-powered team management workflows, facilitated AI sessions for
-            a People Leadership Forum, and planned the department's first agentic
-            AI hackathon.
-          - |
-            Mentored 3 early-career associated engineering managers in org; two
-            resulted in promotions to full engineering manager roles.
+            Claude-powered team management workflows, and facilitated AI sessions
+            for a People Leadership Forum.
           - |
             Facilitated org's People Leadership Forum, delivering leadership development
             programming on team-building, process management, and organizational
             problem-solving for managers across the org.
+          - |
+            Mentored 3 early-career associated engineering managers in org; two
+            resulted in promotions to full engineering manager roles.
           - |
             Chartered cross-org working groups (Phalanx, Deployments, Delivery Culture)
             that standardized release cutoffs, increased Tuesday merge volume by
@@ -474,8 +476,8 @@ employment:
             SonarQube, Snyk, and Xray PR quality gates; shepherded FedRAMP/IL4 support,
             FIPS 140-3, SLSA adherence, and AWS IAM governance initiatives.
           - |
-            Built and sustained a high-performing team across multiple organizational
-            restructurings; established career growth programs for individual contributors.
+            Built and sustained a high-performing 10-person team across multiple
+            organizational restructurings; established career growth programs for individual contributors.
           - |
             Designed and drove adoption of a train-based release and deployment
             model across org; drove standardized cutoff times that increased merge
